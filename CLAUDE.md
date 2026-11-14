@@ -23,7 +23,7 @@ Migração da landing page atual da MBVfY (feita em WordPress/Elementor) para um
 - Stack: site estático, sem build — `index.html`, `assets/css/style.css`, `assets/js/main.js`.
 - WhatsApp: número único na constante `WHATSAPP` em `assets/js/main.js`. Todo link com `data-wa="mensagem"` vira link do WhatsApp com a mensagem pronta. O formulário não envia e-mail: monta a mensagem e abre no WhatsApp.
 - **Sem catálogo de produtos por enquanto** (decisão do dono: o catálogo ainda não está formatado). A seção "O que fabricamos" (`#produtos`) é só uma lista simples dos tipos de móveis com um botão de orçamento. Não criar fichas de produto, filtros ou páginas de catálogo sem pedido.
-- Galeria "Inspiração" (`#lojas`): fotos enviadas pelo dono em `assets/img/`. **Não são lojas mobiliadas pela MBVfY** — são referências. Nunca apresentar essas fotos como trabalhos/clientes da MBVfY; manter o aviso "Imagens ilustrativas" (também na foto de "O que fabricamos"). Fotos com moldura branca levam a classe `img--framed` (amplia para cortar a borda).
+- Galeria "Inspiração" (`#lojas`): fotos enviadas pelo dono em `assets/img/`. **Não são lojas mobiliadas pela MBVfY** — são referências. Nunca apresentar essas fotos como trabalhos/clientes da MBVfY, mas também **não** marcar como "imagens ilustrativas" (pedido do dono): textos ao redor devem ser neutros. Fotos com moldura branca levam a classe `img--framed` (amplia para cortar a borda).
 - Demais imagens (hero, antes/depois): por enquanto vêm do site antigo (`mbvfyacomob.com.br/wp-content/uploads/...`). Antes de desligar o WordPress, copiar para `assets/img/` e trocar os links.
 - Hospedagem e publicação: **a definir**.
 
