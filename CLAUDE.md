@@ -19,8 +19,16 @@ Público-alvo: empresários e gestores de comércio que estão montando, reforma
 Migração da landing page atual da MBVfY (feita em WordPress/Elementor) para um projeto próprio neste repositório, **com melhorias importantes** em relação à versão original.
 
 - A LP original serve de referência de conteúdo (textos, produtos, fotos, contatos), não de código: não copiar a estrutura do Elementor.
-- Objetivo principal da página: gerar contatos/orçamentos de empresas (ex.: WhatsApp, formulário).
-- Stack, hospedagem e forma de publicação: **a definir** (atualizar esta seção quando decidido).
+- Objetivo principal da página: gerar pedidos de orçamento pelo WhatsApp.
+- Stack: site estático, sem build — `index.html`, `assets/css/style.css`, `assets/js/main.js`.
+- WhatsApp: número único na constante `WHATSAPP` em `assets/js/main.js`. Todo link com `data-wa="mensagem"` vira link do WhatsApp com a mensagem pronta. O formulário não envia e-mail: monta a mensagem e abre no WhatsApp.
+- Catálogo: cada produto é um `<article class="product" data-cat="...">`; categorias `atendimento`, `exposicao`, `estoque` (filtros nos botões `.chip`).
+- Imagens: por enquanto vêm do site antigo (`mbvfyacomob.com.br/wp-content/uploads/...`). Antes de desligar o WordPress, copiar para `assets/img/` e trocar os links. Produtos sem foto usam um ícone (`.product__ph`) até chegarem fotos reais.
+- Hospedagem e publicação: **a definir**.
+
+## Rodar localmente
+
+Abrir com um servidor estático (não via `file://`, senão o CSS/JS relativos podem não carregar). Neste PC não há Python nem Node; a sessão usou um servidor PowerShell temporário configurado em `.claude/launch.json` (não versionado).
 
 ## Regras de trabalho
 
