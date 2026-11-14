@@ -21,7 +21,6 @@ const form = document.getElementById("form-orcamento");
 if (form) {
   const erro = form.querySelector(".form__error");
   const botao = form.querySelector("button[type=submit]");
-  const sucesso = document.getElementById("form-sucesso");
 
   function mostrarErro(texto) {
     erro.textContent = texto;
@@ -46,7 +45,7 @@ if (form) {
     mostrarErro("");
 
     // Robô de spam preencheu o campo escondido: finge sucesso e não envia
-    if (valor("_honey")) { form.hidden = true; sucesso.hidden = false; return; }
+    if (valor("_honey")) { window.location.href = "obrigado.html"; return; }
 
     const payload = {
       Nome: valor("nome"),
@@ -71,11 +70,10 @@ if (form) {
       const json = await resp.json().catch(function () { return {}; });
       if (!resp.ok || String(json.success) !== "true") throw new Error(json.message || "Falha no envio");
 
-      form.hidden = true;
-      sucesso.hidden = false;
-      sucesso.focus();
       // Ponto para medir conversão do Google Ads (ativo quando a tag do Google estiver na página)
       if (typeof window.gtag === "function") window.gtag("event", "generate_lead", { form: "orcamento" });
+      // Vai para a página de obrigado (usada também como conversão no Google Ads)
+      window.location.href = "obrigado.html";
     } catch (err) {
       mostrarErro("Não foi possível enviar agora. Tente de novo ou fale com a gente pelo WhatsApp: (21) 99652-9608.");
     } finally {

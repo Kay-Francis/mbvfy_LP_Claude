@@ -205,12 +205,36 @@ p { margin: 0 0 1em; }
 .form textarea { resize: vertical; }
 .form [aria-invalid="true"] { border-color: #ef4444; }
 .form__error { color: #f87171; margin: 0; font-size: .92rem; }
-.form--ok { align-content: start; }
-.form--ok p { margin: 0; }
-.form[hidden] { display: none; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .form button[disabled] { opacity: .6; cursor: wait; }
 .form__note {color: var(--muted); font-size: .82rem; margin: 0; text-align: center; }
+
+/* Página de obrigado */
+.thanks { padding: 56px 0 72px; min-height: calc(100vh - 72px - 90px); }
+.thanks__box { max-width: 720px; }
+.thanks__icon {
+  width: 64px; height: 64px; border-radius: 50%;
+  display: grid; place-items: center; margin-bottom: 24px;
+  background: var(--brand); color: var(--on-brand);
+}
+.thanks__icon svg { width: 34px; height: 34px; }
+.thanks h1 { font-size: clamp(1.8rem, 4.5vw, 2.8rem); }
+.thanks__steps { list-style: none; padding: 0; margin: 32px 0; display: grid; gap: 12px; counter-reset: t; }
+.thanks__steps li {
+  display: grid; gap: 2px; position: relative;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 16px 20px 16px 64px;
+}
+.thanks__steps li::before {
+  counter-increment: t; content: counter(t);
+  position: absolute; left: 20px; top: 16px;
+  width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center;
+  border: 2px solid var(--brand); color: var(--brand); font-weight: 800;
+}
+.thanks__steps span { color: var(--muted); }
+.thanks__cta { margin-top: 8px; }
+.thanks + .footer { padding-bottom: 28px; }
 
 /* Rodapé */
 .footer { border-top: 1px solid var(--line); padding: 28px 0 96px; color: var(--muted); font-size: .9rem; }
