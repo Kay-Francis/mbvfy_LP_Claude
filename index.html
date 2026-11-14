@@ -267,18 +267,30 @@
           <label>WhatsApp com DDD
             <input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(21) 90000-0000" required>
           </label>
+          <label>E-mail
+            <input name="email" type="email" autocomplete="email" placeholder="voce@empresa.com.br">
+          </label>
           <label>Tipo de comércio
             <input name="comercio" type="text" placeholder="Ex.: loja de bebidas, motopeças, mercado">
           </label>
           <label>O que você precisa
             <textarea name="mensagem" rows="4" placeholder="Ex.: 2 balcões e 4 gôndolas para uma loja de 60 m²" required></textarea>
           </label>
-          <p class="form__error" role="alert" hidden>Preencha nome, WhatsApp e o que você precisa.</p>
-          <button class="btn btn--full" type="submit">
-            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Enviar pelo WhatsApp
-          </button>
+          <!-- Campo-armadilha contra robôs de spam: fica escondido para pessoas -->
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="form__error" role="alert" hidden></p>
+          <button class="btn btn--full" type="submit">Enviar pedido de orçamento</button>
           <p class="form__note">Seus dados são usados só para responder ao seu pedido de orçamento.</p>
         </form>
+
+        <div class="form form--ok" id="form-sucesso" hidden tabindex="-1">
+          <h3>Pedido enviado!</h3>
+          <p class="muted">Recebemos suas informações e nossa equipe vai entrar em contato em breve.</p>
+          <p class="muted">Quer agilizar? Fale agora com a gente pelo WhatsApp.</p>
+          <a class="btn btn--full" data-wa="Olá! Acabei de enviar um pedido de orçamento pelo site." href="#contato">
+            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Falar no WhatsApp
+          </a>
+        </div>
       </div>
     </section>
   </main>

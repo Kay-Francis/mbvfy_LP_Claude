@@ -205,7 +205,12 @@ p { margin: 0 0 1em; }
 .form textarea { resize: vertical; }
 .form [aria-invalid="true"] { border-color: #ef4444; }
 .form__error { color: #f87171; margin: 0; font-size: .92rem; }
-.form__note { color: var(--muted); font-size: .82rem; margin: 0; text-align: center; }
+.form--ok { align-content: start; }
+.form--ok p { margin: 0; }
+.form[hidden] { display: none; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form button[disabled] { opacity: .6; cursor: wait; }
+.form__note {color: var(--muted); font-size: .82rem; margin: 0; text-align: center; }
 
 /* Rodapé */
 .footer { border-top: 1px solid var(--line); padding: 28px 0 96px; color: var(--muted); font-size: .9rem; }
