@@ -12,23 +12,6 @@ document.querySelectorAll("[data-wa]").forEach(function (a) {
   a.rel = "noopener";
 });
 
-// Filtro do catálogo
-const chips = document.querySelectorAll(".chip");
-const produtos = document.querySelectorAll(".product");
-chips.forEach(function (chip) {
-  chip.addEventListener("click", function () {
-    const filtro = chip.dataset.filter;
-    chips.forEach(function (c) {
-      const ativo = c === chip;
-      c.classList.toggle("is-active", ativo);
-      c.setAttribute("aria-pressed", String(ativo));
-    });
-    produtos.forEach(function (p) {
-      p.hidden = filtro !== "todos" && p.dataset.cat !== filtro;
-    });
-  });
-});
-
 // Formulário: monta a mensagem e abre no WhatsApp
 const form = document.getElementById("form-orcamento");
 if (form) {

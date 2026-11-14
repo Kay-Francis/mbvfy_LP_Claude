@@ -22,8 +22,8 @@ Migração da landing page atual da MBVfY (feita em WordPress/Elementor) para um
 - Objetivo principal da página: gerar pedidos de orçamento pelo WhatsApp.
 - Stack: site estático, sem build — `index.html`, `assets/css/style.css`, `assets/js/main.js`.
 - WhatsApp: número único na constante `WHATSAPP` em `assets/js/main.js`. Todo link com `data-wa="mensagem"` vira link do WhatsApp com a mensagem pronta. O formulário não envia e-mail: monta a mensagem e abre no WhatsApp.
-- Catálogo: cada produto é um `<article class="product" data-cat="...">`; categorias `atendimento`, `exposicao`, `estoque` (filtros nos botões `.chip`).
-- Imagens: por enquanto vêm do site antigo (`mbvfyacomob.com.br/wp-content/uploads/...`). Antes de desligar o WordPress, copiar para `assets/img/` e trocar os links. Produtos sem foto usam um ícone (`.product__ph`) até chegarem fotos reais.
+- **Sem catálogo de produtos por enquanto** (decisão do dono: o catálogo ainda não está formatado). A seção "O que fabricamos" (`#produtos`) é só uma lista simples dos tipos de móveis com um botão de orçamento. Não criar fichas de produto, filtros ou páginas de catálogo sem pedido.
+- Imagens: por enquanto vêm do site antigo (`mbvfyacomob.com.br/wp-content/uploads/...`). Antes de desligar o WordPress, copiar para `assets/img/` e trocar os links.
 - Hospedagem e publicação: **a definir**.
 
 ## Rodar localmente
