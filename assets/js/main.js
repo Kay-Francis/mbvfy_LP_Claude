@@ -83,6 +83,27 @@ if (form) {
   });
 }
 
+// Carrossel de depoimentos: repete os cartões até cobrir a tela e duplica o
+// conjunto, para o movimento contínuo (esquerda → direita) não ter emendas.
+document.querySelectorAll("[data-marquee]").forEach(function (track) {
+  const originais = Array.from(track.children);
+  if (!originais.length) return;
+  const larguraConjunto = track.scrollWidth;
+  const repeticoes = Math.max(1, Math.ceil(window.innerWidth / larguraConjunto));
+  function clonar(lista) {
+    lista.forEach(function (el) {
+      const c = el.cloneNode(true);
+      c.setAttribute("aria-hidden", "true");
+      track.appendChild(c);
+    });
+  }
+  for (let i = 1; i < repeticoes; i++) clonar(originais);
+  clonar(Array.from(track.children)); // segunda metade idêntica
+  // velocidade constante (~40 px por segundo)
+  track.style.setProperty("--marquee-dur", Math.round(track.scrollWidth / 2 / 40) + "s");
+  track.classList.add("is-running");
+});
+
 // Ano atual no rodapé
 const ano = document.getElementById("ano");
 if (ano) ano.textContent = new Date().getFullYear();
