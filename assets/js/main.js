@@ -104,6 +104,38 @@ document.querySelectorAll("[data-marquee]").forEach(function (track) {
   track.classList.add("is-running");
 });
 
+// Mostra "… Leia mais" só nos cartões cujo texto passou de 5 linhas.
+// Mede depois que a fonte carrega, senão a contagem de linhas pode errar.
+function marcarTextosCortados() {
+  document.querySelectorAll(".marquee .review").forEach(function (card) {
+    const texto = card.querySelector("blockquote");
+    const botao = card.querySelector(".review__mais");
+    if (!texto || !botao) return;
+    const cortado = texto.scrollHeight > texto.clientHeight + 2;
+    botao.hidden = !cortado;
+    card.classList.toggle("is-cortado", cortado);
+  });
+}
+marcarTextosCortados();
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(marcarTextosCortados);
+
+// Abre o depoimento completo numa janela ao clicar em "… Leia mais" ou no texto cortado
+const modal = document.getElementById("review-modal");
+if (modal && typeof modal.showModal === "function") {
+  const conteudo = modal.querySelector(".review-modal__conteudo");
+  document.addEventListener("click", function (e) {
+    const alvo = e.target.closest(".review__mais, .review.is-cortado blockquote");
+    if (!alvo) return;
+    const card = alvo.closest(".review").cloneNode(true);
+    card.removeAttribute("aria-hidden");
+    conteudo.replaceChildren(card);
+    modal.showModal();
+  });
+  modal.querySelector(".review-modal__fechar").addEventListener("click", function () { modal.close(); });
+  // fecha ao clicar fora do cartão
+  modal.addEventListener("click", function (e) { if (e.target === modal) modal.close(); });
+}
+
 // Ano atual no rodapé
 const ano = document.getElementById("ano");
 if (ano) ano.textContent = new Date().getFullYear();

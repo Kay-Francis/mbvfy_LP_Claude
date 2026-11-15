@@ -206,8 +206,8 @@ p { margin: 0 0 1em; }
 }
 /* Cartões menores, fundo escuro e borda clara */
 .review {
-  width: 260px; flex: none; margin: 0;
-  display: grid; gap: 10px; align-content: start;
+  width: 260px; height: 250px; flex: none; margin: 0;
+  display: flex; flex-direction: column; gap: 10px;
   background: #1c1c1f; border: 1px solid rgba(255, 255, 255, .55);
   border-radius: 12px; padding: 16px 18px;
   font-size: .9rem; line-height: 1.5; color: #f4f4f5;
@@ -219,7 +219,36 @@ p { margin: 0 0 1em; }
 .review__meta { color: #a1a1aa; font-size: .78rem; }
 .review__g { width: 18px; height: 18px; flex: none; }
 .review .stars { color: #fbbc04; letter-spacing: 2px; font-size: .95rem; }
-.review blockquote { margin: 0; color: #d4d4d8; }
+/* Texto cortado em 5 linhas com "…"; o restante abre numa janela */
+.review blockquote {
+  margin: 0; color: #d4d4d8;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; line-clamp: 5;
+  overflow: hidden;
+}
+.review.is-cortado blockquote { cursor: pointer; }
+.review__mais {
+  margin-top: auto; align-self: flex-start;
+  font: inherit; font-size: .82rem; font-weight: 700; color: #ff8a01;
+  background: none; border: 0; padding: 0; cursor: pointer;
+}
+.review__mais:hover { text-decoration: underline; }
+.review__mais[hidden] { display: none; }
+
+.review-modal {
+  width: min(420px, calc(100vw - 32px)); padding: 0; border: 0; background: transparent;
+  color: #f4f4f5;
+}
+.review-modal::backdrop { background: rgba(0, 0, 0, .7); }
+.review-modal__conteudo .review { width: auto; height: auto; font-size: 1rem; padding: 24px; }
+.review-modal__conteudo .review blockquote { display: block; overflow: visible; cursor: auto; }
+.review-modal__conteudo .review__mais { display: none; }
+.review-modal__fechar {
+  position: absolute; top: 8px; right: 10px; z-index: 1;
+  width: 36px; height: 36px; border-radius: 50%; border: 0; cursor: pointer;
+  background: rgba(255, 255, 255, .12); color: #fff; font-size: 1.5rem; line-height: 1;
+}
+.review-modal__fechar:hover { background: rgba(255, 255, 255, .22); }
+.review-modal .review__top { padding-right: 36px; }
 
 /* Passos */
 .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; counter-reset: s; }
