@@ -99,9 +99,54 @@ document.querySelectorAll("[data-marquee]").forEach(function (track) {
   }
   for (let i = 1; i < repeticoes; i++) clonar(originais);
   clonar(Array.from(track.children)); // segunda metade idêntica
-  // velocidade constante (~40 px por segundo)
-  track.style.setProperty("--marquee-dur", Math.round(track.scrollWidth / 2 / 40) + "s");
-  track.classList.add("is-running");
+
+  // Movimento controlado por JS: anda sozinho para a direita e as setas
+  // empurram um cartão para cada lado. Pausa com o mouse em cima.
+  const marquee = track.closest(".marquee");
+  const carousel = track.closest(".carousel");
+  const VELOCIDADE = 40; // px por segundo
+  const semMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const passo = function () {
+    const card = track.children[0];
+    return card.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 16);
+  };
+  let metade = 0;
+  let x = 0;          // posição atual
+  let pendente = 0;   // deslocamento pedido pelas setas, aplicado aos poucos
+  let pausado = false;
+  let ultimo = performance.now();
+
+  function medir() { metade = (track.scrollWidth + parseFloat(getComputedStyle(track).columnGap || 16)) / 2; }
+  medir();
+  x = -metade;
+  window.addEventListener("resize", medir);
+
+  function quadro(agora) {
+    const dt = Math.min(0.05, (agora - ultimo) / 1000);
+    ultimo = agora;
+    if (!pausado && !semMovimento) x += VELOCIDADE * dt;
+    if (pendente) {
+      const mover = Math.abs(pendente) < 1 ? pendente : pendente * Math.min(1, dt * 10);
+      x += mover;
+      pendente -= mover;
+    }
+    // mantém x dentro de uma volta, para o loop não ter fim
+    while (x > 0) x -= metade;
+    while (x <= -metade) x += metade;
+    track.style.transform = "translateX(" + x + "px)";
+    requestAnimationFrame(quadro);
+  }
+  requestAnimationFrame(quadro);
+
+  marquee.addEventListener("mouseenter", function () { pausado = true; });
+  marquee.addEventListener("mouseleave", function () { pausado = false; });
+
+  if (carousel) {
+    const prev = carousel.querySelector(".carousel__seta--prev");
+    const next = carousel.querySelector(".carousel__seta--next");
+    if (prev) prev.addEventListener("click", function () { pendente += passo(); });
+    if (next) next.addEventListener("click", function () { pendente -= passo(); });
+  }
 });
 
 // Mostra "… Leia mais" só nos cartões cujo texto passou de 5 linhas.
