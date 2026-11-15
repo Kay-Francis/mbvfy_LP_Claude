@@ -35,6 +35,14 @@ O logo do topo (`index.html` e `obrigado.html`) é um **SVG inline** recriado a 
 
 Os links para `style.css` e `main.js` em `index.html` e `obrigado.html` levam `?v=AAAAMMDDx`. **Sempre que mudar CSS ou JS, trocar esse número nos dois arquivos**, senão o navegador do visitante pode continuar mostrando a versão antiga (já aconteceu: o dono viu a galeria velha em vez do carrossel).
 
+## Pendências (atualizado em 14/11/2026)
+
+- [ ] **Ativar o formulário:** o dono precisa fazer um envio de teste e clicar em "Activate Form" no e-mail do FormSubmit em mbvfyacomob@gmail.com. Até lá, os pedidos não chegam.
+- [ ] **Revisar a copy:** o dono vai revisar os textos. Três pontos levantados: título "Resultado real" (antes/depois) só vale se as fotos forem de loja mobiliada pela MBVfY; passo 01 de "Como funciona" fala só em WhatsApp; e-mail exibido (contato@mbvfyacomob.com.br) é diferente do que recebe o formulário (mbvfyacomob@gmail.com).
+- [ ] **Imagens do site antigo:** foto da primeira dobra, fotos do antes/depois e favicon ainda vêm de `mbvfyacomob.com.br/wp-content/...`. Copiar para `assets/img/` antes de desligar o WordPress.
+- [ ] **Publicar:** escolher hospedagem (GitHub Pages ou Cloudflare Pages) e apontar o domínio.
+- [ ] **Google Ads:** instalar a tag do Google e configurar conversão na visita a `/obrigado.html` (o evento `generate_lead` já é disparado).
+
 ## Rodar localmente
 
 Abrir com um servidor estático (não via `file://`, senão o CSS/JS relativos podem não carregar). Neste PC não há Python nem Node; a sessão usou um servidor PowerShell temporário configurado em `.claude/launch.json` (não versionado).
