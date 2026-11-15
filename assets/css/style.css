@@ -187,10 +187,39 @@ p { margin: 0 0 1em; }
 }
 .tag--muted { background: #3a3a40; color: var(--text); }
 
-/* Depoimentos (widget Trustindex com avaliações do Google) */
-.reviews-widget { margin-bottom: 32px; min-height: 200px; }
-/* Esconde o selo "Certificado: Trustindex" abaixo do carrossel (pedido do dono) */
-.reviews-widget .ti-verified-by { display: none !important; }
+/* Depoimentos: carrossel contínuo da esquerda para a direita */
+.marquee {
+  overflow: hidden; margin: 0 -16px 32px; padding: 4px 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+.marquee__track { display: flex; align-items: flex-start; gap: 16px; width: max-content; }
+.marquee__track.is-running { animation: marquee var(--marquee-dur, 60s) linear infinite; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+@keyframes marquee {
+  from { transform: translateX(calc(-50% - 8px)); }
+  to   { transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+  .marquee__track.is-running { animation: none; }
+}
+/* Cartões menores, fundo escuro e borda clara */
+.review {
+  width: 260px; flex: none; margin: 0;
+  display: grid; gap: 10px; align-content: start;
+  background: #1c1c1f; border: 1px solid rgba(255, 255, 255, .55);
+  border-radius: 12px; padding: 16px 18px;
+  font-size: .9rem; line-height: 1.5; color: #f4f4f5;
+}
+.review__top { display: flex; align-items: center; gap: 10px; }
+.review__top div { display: grid; line-height: 1.25; flex: 1; min-width: 0; }
+.review__top strong { font-size: .95rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.review__foto { width: 40px; height: 40px; border-radius: 50%; flex: none; }
+.review__meta { color: #a1a1aa; font-size: .78rem; }
+.review__g { width: 18px; height: 18px; flex: none; }
+.review .stars { color: #fbbc04; letter-spacing: 2px; font-size: .95rem; }
+.review blockquote { margin: 0; color: #d4d4d8; }
 
 /* Passos */
 .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; counter-reset: s; }
