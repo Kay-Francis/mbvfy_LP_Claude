@@ -189,6 +189,8 @@ p { margin: 0 0 1em; }
 
 /* Depoimentos (widget Trustindex com avaliações do Google) */
 .reviews-widget { margin-bottom: 32px; min-height: 200px; }
+/* Esconde o selo "Certificado: Trustindex" abaixo do carrossel (pedido do dono) */
+.reviews-widget .ti-verified-by { display: none !important; }
 
 /* Passos */
 .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; counter-reset: s; }
