@@ -181,6 +181,23 @@ if (modal && typeof modal.showModal === "function") {
   modal.addEventListener("click", function (e) { if (e.target === modal) modal.close(); });
 }
 
+// Logo animado: as peças se encontram ao abrir a página e de novo ao passar o mouse
+document.querySelectorAll(".logo-anim").forEach(function (logo) {
+  function animar() {
+    logo.classList.remove("is-anim");
+    void logo.offsetWidth; // reinicia a animação
+    logo.classList.add("is-anim");
+  }
+  animar();
+  let pronto = true;
+  logo.addEventListener("mouseenter", function () {
+    if (!pronto) return;
+    pronto = false;
+    animar();
+    setTimeout(function () { pronto = true; }, 1700);
+  });
+});
+
 // Ano atual no rodapé
 const ano = document.getElementById("ano");
 if (ano) ano.textContent = new Date().getFullYear();

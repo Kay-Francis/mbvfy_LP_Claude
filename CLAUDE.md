@@ -27,6 +27,10 @@ Migração da landing page atual da MBVfY (feita em WordPress/Elementor) para um
 - Demais imagens (hero, antes/depois): por enquanto vêm do site antigo (`mbvfyacomob.com.br/wp-content/uploads/...`). Antes de desligar o WordPress, copiar para `assets/img/` e trocar os links.
 - Hospedagem e publicação: **a definir**.
 
+## Logo
+
+O logo do topo (`index.html` e `obrigado.html`) é um **SVG inline** recriado a partir da imagem original: textos "mbv" (laranja), "FY" (branco), "AÇO" (branco fino), "mob" (laranja) e a cruz branca, cada peça com a classe `lp-*`. Animação de entrada (`.logo-anim.is-anim` em `style.css`, disparada pelo `main.js`): a cruz se desenha e as quatro palavras chegam de lados diferentes (esquerda, cima, baixo, direita) e se encontram; repete ao passar o mouse. Tamanho: 140px de largura (116px no celular). Se mudar o logo, alterar nos dois arquivos.
+
 ## Cache dos arquivos
 
 Os links para `style.css` e `main.js` em `index.html` e `obrigado.html` levam `?v=AAAAMMDDx`. **Sempre que mudar CSS ou JS, trocar esse número nos dois arquivos**, senão o navegador do visitante pode continuar mostrando a versão antiga (já aconteceu: o dono viu a galeria velha em vez do carrossel).
