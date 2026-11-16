@@ -62,3 +62,17 @@ Abrir com um servidor estático (não via `file://`, senão o CSS/JS relativos p
 - **Cores alternadas por dobra** (padrão da LP original, pedido do dono): cada `<section>` usa uma classe de tema — `s-dark` (#121212), `s-orange` (degradê #FF7C01→#FF9901), `s-light` (#F7F7F7) ou `s-white` (#FFF). Ordem atual: escuro → claro → laranja → branco → escuro → claro → escuro (depoimentos) → laranja → branco → escuro. Ao criar seção nova, manter a alternância (nunca duas seguidas com o mesmo fundo).
 - Priorizar: carregamento rápido, layout responsivo (celular primeiro), SEO básico e chamadas claras para orçamento.
 - Repositório: https://github.com/Kay-Francis/mbvfy_LP_Claude (branch `main`).
+
+## Agent skills
+
+### Issue tracker
+
+As issues ficam no GitHub Issues de Kay-Francis/mbvfy_LP_Claude (via `gh`). Ver `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Etiquetas padrão: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. Ver `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: um `GLOSSARY.md` e `docs/adr/` na raiz (criados só quando necessário). Ver `docs/agents/domain.md`.
