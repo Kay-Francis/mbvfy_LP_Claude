@@ -33,7 +33,7 @@ O logo do topo (`index.html` e `obrigado.html`) é um **SVG inline** recriado a 
 
 ## Checagens de design (Impeccable)
 
-O Impeccable (skill pessoal em `~/.claude/skills/impeccable`) roda sozinho após cada edição de HTML/CSS/JS e no fim de cada tarefa (hooks em `~/.claude/settings.json`, configuração do projeto em `.impeccable/config.json`). Contraste mínimo WCAG AA: nas seções laranja o texto é escuro (#121212); nos fundos claros o laranja de texto é #a34d00. Exceção registrada: a frase acima do título principal ("FABRICAMOS O MOBILIÁRIO PARA O SEU NEGÓCIO") foi pedida pelo dono.
+O Impeccable (skill pessoal em `~/.claude/skills/impeccable`) roda sozinho após cada edição de HTML/CSS/JS e no fim de cada tarefa (hooks em `~/.claude/settings.json`, configuração do projeto em `.impeccable/config.json`). Contraste mínimo WCAG AA: nas seções laranja o texto é escuro (#121212); nos fundos claros o laranja de texto é #a34d00. Exceção registrada: a frase acima do título principal ("FABRICAMOS O MOBILIÁRIO PARA O SEU NEGÓCIO") foi pedida pelo dono. Não usar frases pequenas em caixa alta acima dos títulos das seções (removidas a pedido do dono em 15/11/2026); só "O problema…" e "Mais frente de exposição…" ficaram, por fazerem parte da frase do título.
 
 ## Cache dos arquivos
 
@@ -42,7 +42,7 @@ Os links para `style.css` e `main.js` em `index.html` e `obrigado.html` levam `?
 ## Pendências (atualizado em 14/11/2026)
 
 - [ ] **Ativar o formulário:** o dono precisa fazer um envio de teste e clicar em "Activate Form" no e-mail do FormSubmit em mbvfyacomob@gmail.com. Até lá, os pedidos não chegam.
-- [ ] **Revisar a copy:** o dono vai revisar os textos. Três pontos levantados: título "Resultado real" (antes/depois) só vale se as fotos forem de loja mobiliada pela MBVfY; passo 01 de "Como funciona" fala só em WhatsApp; e-mail exibido (contato@mbvfyacomob.com.br) é diferente do que recebe o formulário (mbvfyacomob@gmail.com).
+- [ ] **Revisar a copy:** o dono vai revisar os textos. Dois pontos levantados: passo 01 de "Como funciona" fala só em WhatsApp; e-mail exibido (contato@mbvfyacomob.com.br) é diferente do que recebe o formulário (mbvfyacomob@gmail.com).
 - [ ] **Imagens do site antigo:** foto da primeira dobra, fotos do antes/depois e favicon ainda vêm de `mbvfyacomob.com.br/wp-content/...`. Copiar para `assets/img/` antes de desligar o WordPress.
 - [ ] **Publicar:** escolher hospedagem (GitHub Pages ou Cloudflare Pages) e apontar o domínio.
 - [ ] **Google Ads:** instalar a tag do Google e configurar conversão na visita a `/obrigado.html` (o evento `generate_lead` já é disparado).
