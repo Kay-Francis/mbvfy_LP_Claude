@@ -194,8 +194,9 @@ h1, h2, h3 { text-wrap: balance; }
 }
 @media (min-width: 760px) { .compare { aspect-ratio: 3 / 2; max-width: 960px; margin: 0 auto; } .compare__legendas { max-width: 960px; margin-left: auto; margin-right: auto; } }
 .compare__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
-.compare__img--antes { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
-.compare__rotulo { position: absolute; top: 14px; z-index: 2; margin: 0; pointer-events: none; }
+/* A camada do "antes" (foto + etiqueta) é recortada junto; a etiqueta "Depois" fica por baixo dela */
+.compare__antes { position: absolute; inset: 0; z-index: 1; clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.compare__rotulo { position: absolute; top: 14px; margin: 0; pointer-events: none; }
 .compare__rotulo--antes { left: 14px; }
 .compare__rotulo--depois { right: 14px; }
 .compare__barra {
