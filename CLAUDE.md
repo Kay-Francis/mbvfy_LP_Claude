@@ -45,6 +45,7 @@ Os links para `style.css` e `main.js` em `index.html` e `obrigado.html` levam `?
 - [ ] **Ativar o formulário:** o dono precisa fazer um envio de teste e clicar em "Activate Form" no e-mail do FormSubmit em mbvfyacomob@gmail.com. Até lá, os pedidos não chegam.
 - [ ] **Revisar a copy:** o dono vai revisar os textos. Dois pontos levantados: passo 01 de "Como funciona" fala só em WhatsApp; e-mail exibido (contato@mbvfyacomob.com.br) é diferente do que recebe o formulário (mbvfyacomob@gmail.com).
 - [ ] **Imagens do site antigo:** foto da primeira dobra, fotos do antes/depois e favicon ainda vêm de `mbvfyacomob.com.br/wp-content/...`. Copiar para `assets/img/` antes de desligar o WordPress.
+- [ ] **Antes e depois de loja:** o dono vai enviar fotos de antes/depois de uma loja. Manter o comparador do estoque (depósito) e acrescentar o da loja (por exemplo, abas "Estoque | Loja" ou um segundo comparador).
 - [ ] **Publicar:** escolher hospedagem (GitHub Pages ou Cloudflare Pages) e apontar o domínio.
 - [ ] **Google Ads:** instalar a tag do Google e configurar conversão na visita a `/obrigado.html` (o evento `generate_lead` já é disparado).
 
