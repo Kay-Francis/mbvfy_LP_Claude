@@ -198,6 +198,15 @@ document.querySelectorAll(".logo-anim").forEach(function (logo) {
   });
 });
 
+// Comparador antes/depois: o range invisível move a barra e o recorte da foto "antes"
+document.querySelectorAll(".compare").forEach(function (comp) {
+  const range = comp.querySelector(".compare__range");
+  if (!range) return;
+  function atualizar() { comp.style.setProperty("--pos", range.value + "%"); }
+  range.addEventListener("input", atualizar);
+  atualizar();
+});
+
 // Ano atual no rodapé
 const ano = document.getElementById("ano");
 if (ano) ano.textContent = new Date().getFullYear();

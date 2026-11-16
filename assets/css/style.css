@@ -186,12 +186,40 @@ h1, h2, h3 { text-wrap: balance; }
 }
 @media (min-width: 560px) { .checks--cols { grid-template-columns: 1fr 1fr; column-gap: 20px; } }
 
-/* Antes e depois */
-.ba { display: grid; gap: 20px; }
-@media (min-width: 760px) { .ba { grid-template-columns: 1fr 1fr; } }
-.ba figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-.ba img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
-.ba figcaption { padding: 16px 20px; color: var(--muted); }
+/* Antes e depois: comparador deslizante (arrastar a barra revela o antes à esquerda) */
+.compare {
+  position: relative; overflow: hidden; border-radius: var(--radius);
+  aspect-ratio: 4 / 3; max-height: 640px; width: 100%;
+  background: #2a2a2e; user-select: none; touch-action: pan-y;
+}
+@media (min-width: 760px) { .compare { aspect-ratio: 3 / 2; max-width: 960px; margin: 0 auto; } .compare__legendas { max-width: 960px; margin-left: auto; margin-right: auto; } }
+.compare__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.compare__img--antes { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.compare__rotulo { position: absolute; top: 14px; z-index: 2; margin: 0; pointer-events: none; }
+.compare__rotulo--antes { left: 14px; }
+.compare__rotulo--depois { right: 14px; }
+.compare__barra {
+  position: absolute; top: 0; bottom: 0; left: var(--pos); z-index: 2;
+  width: 3px; margin-left: -1.5px; background: #fff; pointer-events: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .35);
+}
+.compare__alca {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 48px; height: 48px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: #ff8a01; color: #121212; font-weight: 800; font-size: 1.1rem; letter-spacing: 2px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .4);
+}
+/* O controle real é um range invisível sobre a foto: funciona com mouse, toque e teclado */
+.compare__range {
+  position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%;
+  margin: 0; opacity: 0; cursor: ew-resize; -webkit-appearance: none; appearance: none;
+}
+.compare:has(.compare__range:focus-visible) .compare__alca { outline: 3px solid #121212; outline-offset: 2px; }
+.compare__legendas { display: grid; gap: 4px 24px; margin-top: 16px; color: var(--muted); }
+.compare__legendas p { margin: 0; }
+.compare__legendas strong { color: var(--text); }
+@media (min-width: 760px) { .compare__legendas { grid-template-columns: 1fr 1fr; } .compare__legendas p:last-child { text-align: right; justify-self: end; } }
 .tag {
   display: inline-block; margin-right: 6px;
   background: var(--brand); color: var(--on-brand);
