@@ -190,7 +190,7 @@ h1, h2, h3 { text-wrap: balance; }
 .compare {
   position: relative; overflow: hidden; border-radius: var(--radius);
   aspect-ratio: 4 / 3; max-height: 640px; width: 100%;
-  background: #2a2a2e; user-select: none; touch-action: pan-y;
+  user-select: none; touch-action: pan-y;
 }
 @media (min-width: 760px) { .compare { aspect-ratio: 3 / 2; max-width: 960px; margin: 0 auto; } .compare__legendas { max-width: 960px; margin-left: auto; margin-right: auto; } }
 .compare__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
