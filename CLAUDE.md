@@ -31,6 +31,10 @@ Migração da landing page atual da MBVfY (feita em WordPress/Elementor) para um
 
 O logo do topo (`index.html` e `obrigado.html`) é um **SVG inline** recriado a partir da imagem original: textos "mbv" (laranja), "FY" (branco), "AÇO" (branco fino), "mob" (laranja) e a cruz branca, cada peça com a classe `lp-*`. Animação de entrada (`.logo-anim.is-anim` em `style.css`, disparada pelo `main.js`): a cruz se desenha e as quatro palavras chegam de lados diferentes (esquerda, cima, baixo, direita) e se encontram; repete ao passar o mouse. Tamanho: 140px de largura (116px no celular). Se mudar o logo, alterar nos dois arquivos.
 
+## Checagens de design (Impeccable)
+
+O Impeccable (skill pessoal em `~/.claude/skills/impeccable`) roda sozinho após cada edição de HTML/CSS/JS e no fim de cada tarefa (hooks em `~/.claude/settings.json`, configuração do projeto em `.impeccable/config.json`). Contraste mínimo WCAG AA: nas seções laranja o texto é escuro (#121212); nos fundos claros o laranja de texto é #a34d00. Exceção registrada: a frase acima do título principal ("FABRICAMOS O MOBILIÁRIO PARA O SEU NEGÓCIO") foi pedida pelo dono.
+
 ## Cache dos arquivos
 
 Os links para `style.css` e `main.js` em `index.html` e `obrigado.html` levam `?v=AAAAMMDDx`. **Sempre que mudar CSS ou JS, trocar esse número nos dois arquivos**, senão o navegador do visitante pode continuar mostrando a versão antiga (já aconteceu: o dono viu a galeria velha em vez do carrossel).
