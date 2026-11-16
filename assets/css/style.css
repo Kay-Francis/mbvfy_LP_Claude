@@ -103,6 +103,7 @@ h1, h2, h3 { text-wrap: balance; }
 .hero__grid { display: grid; gap: 40px; align-items: center; }
 .lead { font-size: 1.1rem; color: #d4d4d8; max-width: 54ch; }
 .lead__destaque { color: #ff8a01; font-weight: 700; }
+.insp__chamada { color: var(--text); font-weight: 700; font-size: 1.1rem; margin: 8px 0 0; }
 .checks { list-style: none; padding: 0; margin: 0 0 28px; display: grid; gap: 8px; }
 .checks li { padding-left: 30px; position: relative; }
 .checks li::before {
