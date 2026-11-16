@@ -30,7 +30,7 @@ Migração da landing page atual da MBVfY (feita em WordPress/Elementor) para um
 
 ## Logo
 
-O logo do topo (`index.html` e `obrigado.html`) é um **SVG inline** recriado a partir da imagem original: textos "mbv" (laranja), "FY" (branco), "AÇO" (branco fino), "mob" (laranja) e a cruz branca, cada peça com a classe `lp-*`. Animação de entrada (`.logo-anim.is-anim` em `style.css`, disparada pelo `main.js`): a cruz se desenha e as quatro palavras chegam de lados diferentes (esquerda, cima, baixo, direita) e se encontram; repete ao passar o mouse. Tamanho: 140px de largura (116px no celular). Se mudar o logo, alterar nos dois arquivos.
+O logo do topo (`index.html` e `obrigado.html`) é um **SVG inline** recriado a partir da imagem original: textos "mbv" (laranja), "FY" (branco), "AÇO" (branco fino), "mob" (laranja) e a cruz branca, cada peça com a classe `lp-*`. Animação de entrada (`.logo-anim.is-anim` em `style.css`, disparada pelo `main.js`): a cruz se desenha e as quatro palavras chegam de lados diferentes (esquerda, cima, baixo, direita) e se encontram; repete ao passar o mouse. Tamanho: 160px de largura (132px no celular); a linha horizontal passa um pouco além de "mbv" e "mob" (viewBox -14 0 228 112). Se mudar o logo, alterar nos dois arquivos.
 
 ## Checagens de design (Impeccable)
 

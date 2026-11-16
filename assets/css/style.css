@@ -74,8 +74,8 @@ h1, h2, h3 { text-wrap: balance; }
 }
 .topbar__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 92px; }
 .logo { display: block; line-height: 0; }
-.logo-svg { display: block; width: 140px; height: auto; overflow: visible; font-family: var(--font); }
-@media (max-width: 420px) { .logo-svg { width: 116px; } .topbar__inner { height: 80px; } }
+.logo-svg { display: block; width: 160px; height: auto; overflow: visible; font-family: var(--font); }
+@media (max-width: 420px) { .logo-svg { width: 132px; } .topbar__inner { height: 80px; } }
 
 /* Logo animado: as peças vêm de lados diferentes e se encontram formando a logo */
 .logo-anim.is-anim .lp { transform-box: fill-box; transform-origin: center; }
