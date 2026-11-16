@@ -33,7 +33,7 @@ O logo do topo (`index.html` e `obrigado.html`) é um **SVG inline** recriado a 
 
 ## Checagens de design (Impeccable)
 
-O Impeccable (skill pessoal em `~/.claude/skills/impeccable`) roda sozinho após cada edição de HTML/CSS/JS e no fim de cada tarefa (hooks em `~/.claude/settings.json`, configuração do projeto em `.impeccable/config.json`). Contraste mínimo WCAG AA: nas seções laranja o texto é escuro (#121212); nos fundos claros o laranja de texto é #a34d00. Exceção registrada: a frase acima do título principal ("FABRICAMOS O MOBILIÁRIO PARA O SEU NEGÓCIO") foi pedida pelo dono. Não usar frases pequenas em caixa alta acima dos títulos das seções (removidas a pedido do dono em 15/11/2026); só "O problema…" e "Mais frente de exposição…" ficaram, por fazerem parte da frase do título.
+O Impeccable (skill pessoal em `~/.claude/skills/impeccable`) roda sozinho após cada edição de HTML/CSS/JS e no fim de cada tarefa (hooks em `~/.claude/settings.json`, configuração do projeto em `.impeccable/config.json`). Contraste mínimo WCAG AA: nas seções laranja o texto é escuro (#121212); nos fundos claros o laranja de texto é #a34d00. A frase do dono "Fabricamos o mobiliário para o seu negócio" abre o texto da primeira dobra, em destaque laranja (`.lead__destaque`), não como etiqueta acima do título; nenhuma exceção do Impeccable registrada. Não usar frases pequenas em caixa alta acima dos títulos das seções (removidas a pedido do dono em 15/11/2026); só "O problema…" e "Mais frente de exposição…" ficaram, por fazerem parte da frase do título.
 
 ## Cache dos arquivos
 

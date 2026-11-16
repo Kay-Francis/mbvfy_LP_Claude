@@ -9,16 +9,6 @@
   "detector": {
     "ignoreRules": [],
     "ignoreFiles": [],
-    "ignoreValues": [
-      {
-        "rule": "hero-eyebrow-chip",
-        "value": "*",
-        "files": [
-          "index.html"
-        ],
-        "createdAt": "2026-11-16T02:26:56.184Z",
-        "reason": "user confirmed: owner asked for the kicker 'FABRICAMOS O MOBILIÁRIO PARA O SEU NEGÓCIO' above the headline"
-      }
-    ]
+    "ignoreValues": []
   }
 }
