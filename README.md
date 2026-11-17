@@ -11,6 +11,7 @@ npm install
 npm run dev      # desenvolvimento em http://localhost:5173
 npm run build    # site final em dist/
 npm run preview  # confere o conteúdo de dist/
+npm run deploy   # publica no Cloudflare Workers (depois de npx wrangler login)
 ```
 
-Publicar sempre a pasta `dist/`.
+O site é publicado no Cloudflare Workers a partir da pasta `dist/` (configuração em `wrangler.jsonc`).

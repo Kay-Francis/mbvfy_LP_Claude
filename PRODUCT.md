@@ -38,7 +38,7 @@ A MBVfY é a própria fábrica, não uma revenda: fabrica no próprio galpão, v
 - Produtos: balcões estilo industrial, balcões-vitrine, gôndolas, estantes e estantes industriais, estantes monta-carga, vitrines e expositores, checkouts, roupeiros e projetos sob medida.
 - **Sem catálogo de produtos** por decisão do dono (ainda não formatado): nada de fichas, filtros ou páginas de produto sem pedido.
 - Stack: Vite + Tailwind CSS (ver Stack); prioridade para carregamento rápido, celular primeiro e SEO básico.
-- Em aberto: hospedagem e domínio de publicação.
+- Hospedagem: Cloudflare Workers (site estático, pasta `dist/`). Em aberto: o domínio de publicação.
 
 ## Brand Commitments
 

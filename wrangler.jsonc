@@ -1,0 +1,15 @@
+// Publicação no Cloudflare Workers: site só de arquivos estáticos (sem código de Worker).
+// Ver docs/adr/0002-cloudflare-workers.md
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "mbvfy-lp",
+  "compatibility_date": "2026-11-16",
+  "assets": {
+    // Saída do `npm run build`
+    "directory": "./dist",
+    // Tira o .html das URLs: /obrigado.html → /obrigado
+    "html_handling": "auto-trailing-slash",
+    // Endereço inexistente responde 404 (com dist/404.html, se um dia existir)
+    "not_found_handling": "404-page"
+  }
+}

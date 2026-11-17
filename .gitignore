@@ -4,3 +4,5 @@
 .impeccable/*.ndjson
 node_modules/
 dist/
+.wrangler/
+.dev.vars*

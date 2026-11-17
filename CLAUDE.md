@@ -1,84 +1,55 @@
 # CLAUDE.md
 
-## Sobre o negócio
+Landing page da **MBVfY Aço Mob**, fábrica de móveis de aço para o comércio. A página existe para gerar pedidos de orçamento (WhatsApp ou formulário) a partir de anúncios do Google Ads. Ela substitui a página antiga em WordPress/Elementor, que serve só de referência de conteúdo, não de código.
 
-**MBVfY Aço Mob** é uma fábrica de móveis de aço focada em instalações comerciais para empresas, com prioridade para o comércio (lojas, mercados, varejo).
+Este arquivo é só um mapa. Cada assunto tem seu próprio arquivo: leia o que for relevante para a tarefa antes de começar.
 
-Linha de produtos:
-- Balcões estilo industrial
-- Gôndolas
-- Estantes e estantes estilo industrial
-- Checkouts
-- Roupeiros
-- Outros móveis de aço sob medida para ambientes comerciais
+## Onde está cada coisa
 
-Público-alvo: empresários e gestores de comércio que estão montando, reformando ou expandindo lojas.
+| Arquivo | O que guarda | Quando ler |
+| --- | --- | --- |
+| [PRODUCT.md](PRODUCT.md) | Público, objetivo, posicionamento, produtos, provas reais, stack (Impeccable) | Antes de qualquer texto ou seção nova |
+| `DESIGN.md` | Sistema visual (ainda não existe: gerar com `/impeccable document`) | Antes de mexer no visual, quando existir |
+| [GLOSSARY.md](GLOSSARY.md) | Vocabulário do projeto (dobra, pedido de orçamento, Inspiração…) | Ao nomear coisas em issues, código e textos |
+| [CODING_STANDARDS.md](CODING_STANDARDS.md) | Regras do dono e convenções de código e visual | Ao escrever e ao revisar (`/code-review`) |
+| [docs/componentes.md](docs/componentes.md) | Como funcionam formulário, WhatsApp, logo, carrosséis, comparador | Ao mexer em um desses componentes |
+| [docs/adr/](docs/adr/) | Decisões difíceis de desfazer e o porquê | Antes de mudar stack, build ou hospedagem |
+| [docs/pendencias.md](docs/pendencias.md) | O que falta fazer (do dono e técnico) | Ao planejar o próximo passo |
+| [docs/agents/](docs/agents/) | Configuração das skills do Matt (issues, etiquetas, domínio) | Usado pelas próprias skills |
 
-## Sobre o projeto
+## Stack e comandos
 
-Migração da landing page atual da MBVfY (feita em WordPress/Elementor) para um projeto próprio neste repositório, **com melhorias importantes** em relação à versão original.
+Vite + Tailwind CSS nas últimas versões, publicado como site estático no **Cloudflare Workers** (ver [ADR 0001](docs/adr/0001-vite-tailwind-sem-preflight.md) e [ADR 0002](docs/adr/0002-cloudflare-workers.md)).
 
-- A LP original serve de referência de conteúdo (textos, produtos, fotos, contatos), não de código: não copiar a estrutura do Elementor.
-- Objetivo principal da página: gerar pedidos de orçamento (a página é usada em anúncios do Google Ads).
-- Formulário: envia por e-mail para **mbvfyacomob@gmail.com** via FormSubmit (`FORM_ENDPOINT` em `assets/js/main.js`). Campos: nome, WhatsApp, e-mail, tipo de comércio, o que precisa (+ campo-armadilha `_honey` contra spam). Após o envio dispara o evento `generate_lead` (se a tag do Google `gtag` estiver instalada) e redireciona para `obrigado.html` — página de agradecimento (noindex) usada como conversão no Google Ads.
-- Stack: **Vite + Tailwind CSS, últimas versões** (migrado em 16/11/2026; detalhes em `PRODUCT.md` > Stack). Páginas `index.html` e `obrigado.html` na raiz (entradas do Vite em `vite.config.js`); CSS de entrada `assets/css/main.css` (Tailwind sem preflight + tokens da marca em `@theme static` + o CSS original `assets/css/style.css` na camada `components`); JS em `assets/js/main.js` (carregado como `type="module"`). Seções novas podem usar classes do Tailwind (`bg-escuro`, `text-laranja-texto`…); o CSS antigo é convertido aos poucos, sem mudar o visual.
-- WhatsApp: número único na constante `WHATSAPP` em `assets/js/main.js`. Todo link com `data-wa="mensagem"` vira link do WhatsApp com a mensagem pronta.- **Sem catálogo de produtos por enquanto** (decisão do dono: o catálogo ainda não está formatado). A seção "O que fabricamos" (`#produtos`) é só uma lista simples dos tipos de móveis com um botão de orçamento. Não criar fichas de produto, filtros ou páginas de catálogo sem pedido.
-- Galeria "Inspiração" (`#lojas`): carrossel em movimento para a direita (mesmo `[data-marquee]` + setas dos depoimentos), 6 fotos em quadros iguais (380×260px). Fotos enviadas pelo dono em `assets/img/`. **Não são lojas mobiliadas pela MBVfY** — são referências. Nunca apresentar essas fotos como trabalhos/clientes da MBVfY, mas também **não** marcar como "imagens ilustrativas" (pedido do dono): textos ao redor devem ser neutros. Fotos com moldura branca levam a classe `img--framed` (amplia para cortar a borda).
-- Antes e depois: **comparador deslizante** (`.compare`): foto "depois" ao fundo e "antes" recortada até a barra; o controle é um `<input type="range">` invisível sobre a foto (mouse, toque e teclado), ligado em `main.js`. As duas fotos são quadradas (1024×1024).
-- Demais imagens (hero, antes/depois): por enquanto vêm do site antigo (`mbvfyacomob.com.br/wp-content/uploads/...`). Antes de desligar o WordPress, copiar para `assets/img/` e trocar os links.
-- Hospedagem e publicação: **a definir**.
+```bash
+npm install        # primeira vez
+npm run dev        # desenvolvimento em http://localhost:5173
+npm run build      # gera o site final em dist/
+npm run preview    # confere o dist/ antes de publicar
+npm run preview:cf # build + roda o dist/ no Workers local (http://localhost:8787)
+npm run deploy     # build + publica no Cloudflare Workers (só com pedido do dono)
+```
 
-## Logo
+- Páginas: `index.html` e `obrigado.html` na raiz (entradas em `vite.config.js`).
+- CSS: `assets/css/main.css` (Tailwind + tokens da marca) importa o CSS original `assets/css/style.css`. Seções novas usam classes do Tailwind; o CSS antigo vai sendo convertido sem mudar o visual.
+- JS: `assets/js/main.js`, sem framework.
+- O que vai ao ar é sempre a pasta `dist/`, nunca a raiz. Não usar `?v=` nos links: o Vite já renomeia os arquivos a cada build.
+- No app do Claude, `.claude/launch.json` (não versionado) roda o `npm run dev` na porta 5173.
 
-O logo do topo (`index.html` e `obrigado.html`) é um **SVG inline** recriado a partir da imagem original: textos "mbv" (laranja), "FY" (branco), "AÇO" (branco fino), "mob" (laranja) e a cruz branca, cada peça com a classe `lp-*`. Animação de entrada (`.logo-anim.is-anim` em `style.css`, disparada pelo `main.js`): a cruz se desenha e as quatro palavras chegam de lados diferentes (esquerda, cima, baixo, direita) e se encontram; repete ao passar o mouse. Tamanho: 160px de largura (132px no celular); a linha horizontal passa um pouco além de "mbv" e "mob" (viewBox -14 0 228 112). Se mudar o logo, alterar nos dois arquivos.
+## Publicação (Cloudflare Workers)
 
-## Checagens de design (Impeccable)
+Site só de arquivos estáticos, sem código de Worker. A configuração está em [wrangler.jsonc](wrangler.jsonc): `assets.directory` aponta para `./dist`, as URLs ficam sem `.html` (`/obrigado.html` → `/obrigado`) e endereço inexistente responde 404. Publica-se com `npm run deploy` (exige `npx wrangler login` feito pelo dono) ou pelo Workers Builds ligado ao GitHub (build `npm run build`, deploy `npx wrangler deploy`). Primeiro deploy e domínio ainda pendentes (ver [docs/pendencias.md](docs/pendencias.md)). Nunca publicar ou alterar a conta da Cloudflare sem pedido explícito do dono.
 
-O Impeccable (skill pessoal em `~/.claude/skills/impeccable`) roda sozinho após cada edição de HTML/CSS/JS e no fim de cada tarefa (hooks em `~/.claude/settings.json`, configuração do projeto em `.impeccable/config.json`). Contraste mínimo WCAG AA: nas seções laranja o texto é escuro (#121212); nos fundos claros o laranja de texto é #a34d00. A frase do dono "Fabricamos o mobiliário para o seu negócio" abre o texto da primeira dobra, em destaque laranja (`.lead__destaque`), não como etiqueta acima do título; nenhuma exceção do Impeccable registrada. Não usar frases pequenas em caixa alta acima dos títulos das seções (removidas a pedido do dono em 15/11/2026); só "O problema…" e "Mais frente de exposição…" ficaram, por fazerem parte da frase do título.
+## Como trabalhar
 
-## Cache dos arquivos
+**Fluxo de engenharia (skills do Matt).** Ideia nova: `/grill-with-docs` → (se for grande) `/to-spec` → `/to-tickets` → `/implement` com `/tdd` → `/code-review` → `/retro`. Bug difícil: `/diagnosing-bugs`. Issues no GitHub de Kay-Francis/mbvfy_LP_Claude via `gh` ([docs/agents/issue-tracker.md](docs/agents/issue-tracker.md)); etiquetas em [docs/agents/triage-labels.md](docs/agents/triage-labels.md); termos novos vão para o `GLOSSARY.md` e decisões difíceis de desfazer viram ADR ([docs/agents/domain.md](docs/agents/domain.md)).
 
-O build do Vite (`npm run build`) gera os arquivos em `dist/` com nomes que mudam a cada versão (`main-XXXX.css`), então o navegador do visitante sempre recebe a versão nova. Não usar mais `?v=` nos links. O site publicado é a pasta `dist/` (não versionada), nunca a raiz do repositório.
+**Fluxo de design (Impeccable).** Todo trabalho visual passa por `/impeccable`, que lê `PRODUCT.md` e `DESIGN.md`. Os hooks rodam sozinhos após cada edição de HTML/CSS/JS (config em `.impeccable/config.json`); tratar cada aviso conforme a instrução do próprio hook. Fato novo sobre o negócio vai para o `PRODUCT.md`, não para cá.
 
-## Pendências (atualizado em 14/11/2026)
-
-- [ ] **Ativar o formulário:** o dono precisa fazer um envio de teste e clicar em "Activate Form" no e-mail do FormSubmit em mbvfyacomob@gmail.com. Até lá, os pedidos não chegam.
-- [ ] **Revisar a copy:** o dono vai revisar os textos. Dois pontos levantados: passo 01 de "Como funciona" fala só em WhatsApp; e-mail exibido (contato@mbvfyacomob.com.br) é diferente do que recebe o formulário (mbvfyacomob@gmail.com).
-- [ ] **Imagens do site antigo:** foto da primeira dobra, fotos do antes/depois e favicon ainda vêm de `mbvfyacomob.com.br/wp-content/...`. Copiar para `assets/img/` antes de desligar o WordPress.
-- [ ] **Antes e depois de loja:** o dono vai enviar fotos de antes/depois de uma loja. Manter o comparador do estoque (depósito) e acrescentar o da loja (por exemplo, abas "Estoque | Loja" ou um segundo comparador).
-- [ ] **Publicar:** escolher hospedagem (GitHub Pages ou Cloudflare Pages) e apontar o domínio. A hospedagem precisa rodar `npm run build` e publicar a pasta `dist/`.
-- [ ] **Google Ads:** instalar a tag do Google e configurar conversão na visita a `/obrigado.html` (o evento `generate_lead` já é disparado).
-
-## Rodar localmente
-
-Requer Node.js (instalado neste PC em 16/11/2026, versão LTS). Na primeira vez, `npm install`. Depois:
-
-- `npm run dev`: servidor de desenvolvimento com recarga automática (http://localhost:5173).
-- `npm run build`: gera o site final em `dist/`.
-- `npm run preview`: abre o conteúdo de `dist/` para conferir antes de publicar.
-
-No app do Claude, `.claude/launch.json` (não versionado) roda o `npm run dev` na porta 5173.
-
-## Regras de trabalho
+**Regras que valem sempre** (o resto está em [CODING_STANDARDS.md](CODING_STANDARDS.md)):
 
 - Responder e escrever todo o conteúdo do site em **português do Brasil**.
-- Nome da marca escrito sempre como **MBVfY Aço Mob**.
-- Títulos (h1, h2, h3) **sem ponto final** (pedido do dono: o ponto dá ideia de assunto encerrado). Pontuação interna, "!" e "?" continuam.
-- **Depoimentos** (`#depoimentos`): carrossel próprio (sem serviço pago — o Trustindex foi descartado porque cobra após 7 dias). 10 avaliações copiadas do Perfil da Empresa no Google "MBV Fy AÇO Mob Móveis Industriais" (https://maps.google.com/?cid=6896572141785409282) em 14/11/2026, com o **texto original sem edição**; fotos dos clientes em `assets/img/avaliacoes/`. Cartões pequenos, baixos e **todos do mesmo tamanho** (250×196px), fundo escuro e borda clara (pedido do dono); texto cortado em 3 linhas com "…" e botão "… Leia mais" que abre o depoimento completo numa janela (`#review-modal`). Movimento contínuo da esquerda para a direita controlado por JS (`[data-marquee]` em `main.js`, que duplica os cartões), com **setas laranja nos cantos** (`.carousel__seta`) que movem um cartão por clique; pausa com o mouse em cima. Não se atualiza sozinho: para incluir avaliação nova, adicionar um `<figure class="review">` e a foto. Nunca inventar ou reescrever depoimentos.
-- **Cores alternadas por dobra** (padrão da LP original, pedido do dono): cada `<section>` usa uma classe de tema — `s-dark` (#121212), `s-orange` (degradê #FF7C01→#FF9901), `s-light` (#F7F7F7) ou `s-white` (#FFF). Ordem atual: escuro → claro → laranja → branco → escuro → claro → escuro (depoimentos) → laranja → branco → escuro. Ao criar seção nova, manter a alternância (nunca duas seguidas com o mesmo fundo).
-- Priorizar: carregamento rápido, layout responsivo (celular primeiro), SEO básico e chamadas claras para orçamento.
+- Marca escrita sempre **MBVfY Aço Mob**.
+- Nunca inventar ou reescrever depoimentos, clientes, números ou certificações.
+- As fotos da galeria Inspiração não são trabalhos da MBVfY: nunca apresentá-las como tal.
 - Repositório: https://github.com/Kay-Francis/mbvfy_LP_Claude (branch `main`).
-
-## Agent skills
-
-### Issue tracker
-
-As issues ficam no GitHub Issues de Kay-Francis/mbvfy_LP_Claude (via `gh`). Ver `docs/agents/issue-tracker.md`.
-
-### Triage labels
-
-Etiquetas padrão: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. Ver `docs/agents/triage-labels.md`.
-
-### Domain docs
-
-Single-context: um `GLOSSARY.md` e `docs/adr/` na raiz (criados só quando necessário). Ver `docs/agents/domain.md`.
