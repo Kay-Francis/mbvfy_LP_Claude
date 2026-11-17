@@ -35,6 +35,8 @@ Comparador deslizante: a foto "depois" fica ao fundo e a "antes" é recortada at
 
 Só uma lista simples dos tipos de móveis com um botão de orçamento. Sem catálogo por decisão do dono (ver `PRODUCT.md`): nada de fichas, filtros ou páginas de produto sem pedido.
 
-## Imagens de fora
+## Imagens
 
-A foto da primeira dobra, as fotos do antes e depois, a imagem de compartilhamento (`og:image`) e o favicon ainda vêm do site antigo (`mbvfyacomob.com.br/wp-content/uploads/...`). Antes de desligar o WordPress, copiar para `assets/img/` e trocar os links.
+Todas as imagens ficam em `assets/img/` (copiadas do site antigo em 16/11/2026): primeira dobra `loja-bebidas.webp`, antes e depois `estoque-antes.webp` e `estoque-depois.webp` (1024×1024), ícones `favicon-32.png`, `favicon-192.png` e `apple-touch-icon.png`.
+
+Exceção: a imagem de compartilhamento (`og:image` em `index.html`) ainda aponta para o WordPress, porque precisa de endereço completo com domínio. Quando o domínio estiver definido, colocar a foto em `public/` e trocar o link.
