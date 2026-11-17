@@ -21,7 +21,7 @@ Migração da landing page atual da MBVfY (feita em WordPress/Elementor) para um
 - A LP original serve de referência de conteúdo (textos, produtos, fotos, contatos), não de código: não copiar a estrutura do Elementor.
 - Objetivo principal da página: gerar pedidos de orçamento (a página é usada em anúncios do Google Ads).
 - Formulário: envia por e-mail para **mbvfyacomob@gmail.com** via FormSubmit (`FORM_ENDPOINT` em `assets/js/main.js`). Campos: nome, WhatsApp, e-mail, tipo de comércio, o que precisa (+ campo-armadilha `_honey` contra spam). Após o envio dispara o evento `generate_lead` (se a tag do Google `gtag` estiver instalada) e redireciona para `obrigado.html` — página de agradecimento (noindex) usada como conversão no Google Ads.
-- Stack: site estático, sem build — `index.html`, `assets/css/style.css`, `assets/js/main.js`.
+- Stack: **Vite + Tailwind CSS, últimas versões** (migrado em 16/11/2026; detalhes em `PRODUCT.md` > Stack). Páginas `index.html` e `obrigado.html` na raiz (entradas do Vite em `vite.config.js`); CSS de entrada `assets/css/main.css` (Tailwind sem preflight + tokens da marca em `@theme static` + o CSS original `assets/css/style.css` na camada `components`); JS em `assets/js/main.js` (carregado como `type="module"`). Seções novas podem usar classes do Tailwind (`bg-escuro`, `text-laranja-texto`…); o CSS antigo é convertido aos poucos, sem mudar o visual.
 - WhatsApp: número único na constante `WHATSAPP` em `assets/js/main.js`. Todo link com `data-wa="mensagem"` vira link do WhatsApp com a mensagem pronta.- **Sem catálogo de produtos por enquanto** (decisão do dono: o catálogo ainda não está formatado). A seção "O que fabricamos" (`#produtos`) é só uma lista simples dos tipos de móveis com um botão de orçamento. Não criar fichas de produto, filtros ou páginas de catálogo sem pedido.
 - Galeria "Inspiração" (`#lojas`): carrossel em movimento para a direita (mesmo `[data-marquee]` + setas dos depoimentos), 6 fotos em quadros iguais (380×260px). Fotos enviadas pelo dono em `assets/img/`. **Não são lojas mobiliadas pela MBVfY** — são referências. Nunca apresentar essas fotos como trabalhos/clientes da MBVfY, mas também **não** marcar como "imagens ilustrativas" (pedido do dono): textos ao redor devem ser neutros. Fotos com moldura branca levam a classe `img--framed` (amplia para cortar a borda).
 - Antes e depois: **comparador deslizante** (`.compare`): foto "depois" ao fundo e "antes" recortada até a barra; o controle é um `<input type="range">` invisível sobre a foto (mouse, toque e teclado), ligado em `main.js`. As duas fotos são quadradas (1024×1024).
@@ -38,7 +38,7 @@ O Impeccable (skill pessoal em `~/.claude/skills/impeccable`) roda sozinho após
 
 ## Cache dos arquivos
 
-Os links para `style.css` e `main.js` em `index.html` e `obrigado.html` levam `?v=AAAAMMDDx`. **Sempre que mudar CSS ou JS, trocar esse número nos dois arquivos**, senão o navegador do visitante pode continuar mostrando a versão antiga (já aconteceu: o dono viu a galeria velha em vez do carrossel).
+O build do Vite (`npm run build`) gera os arquivos em `dist/` com nomes que mudam a cada versão (`main-XXXX.css`), então o navegador do visitante sempre recebe a versão nova. Não usar mais `?v=` nos links. O site publicado é a pasta `dist/` (não versionada), nunca a raiz do repositório.
 
 ## Pendências (atualizado em 14/11/2026)
 
@@ -46,12 +46,18 @@ Os links para `style.css` e `main.js` em `index.html` e `obrigado.html` levam `?
 - [ ] **Revisar a copy:** o dono vai revisar os textos. Dois pontos levantados: passo 01 de "Como funciona" fala só em WhatsApp; e-mail exibido (contato@mbvfyacomob.com.br) é diferente do que recebe o formulário (mbvfyacomob@gmail.com).
 - [ ] **Imagens do site antigo:** foto da primeira dobra, fotos do antes/depois e favicon ainda vêm de `mbvfyacomob.com.br/wp-content/...`. Copiar para `assets/img/` antes de desligar o WordPress.
 - [ ] **Antes e depois de loja:** o dono vai enviar fotos de antes/depois de uma loja. Manter o comparador do estoque (depósito) e acrescentar o da loja (por exemplo, abas "Estoque | Loja" ou um segundo comparador).
-- [ ] **Publicar:** escolher hospedagem (GitHub Pages ou Cloudflare Pages) e apontar o domínio.
+- [ ] **Publicar:** escolher hospedagem (GitHub Pages ou Cloudflare Pages) e apontar o domínio. A hospedagem precisa rodar `npm run build` e publicar a pasta `dist/`.
 - [ ] **Google Ads:** instalar a tag do Google e configurar conversão na visita a `/obrigado.html` (o evento `generate_lead` já é disparado).
 
 ## Rodar localmente
 
-Abrir com um servidor estático (não via `file://`, senão o CSS/JS relativos podem não carregar). Neste PC não há Python nem Node; a sessão usou um servidor PowerShell temporário configurado em `.claude/launch.json` (não versionado).
+Requer Node.js (instalado neste PC em 16/11/2026, versão LTS). Na primeira vez, `npm install`. Depois:
+
+- `npm run dev`: servidor de desenvolvimento com recarga automática (http://localhost:5173).
+- `npm run build`: gera o site final em `dist/`.
+- `npm run preview`: abre o conteúdo de `dist/` para conferir antes de publicar.
+
+No app do Claude, `.claude/launch.json` (não versionado) roda o `npm run dev` na porta 5173.
 
 ## Regras de trabalho
 

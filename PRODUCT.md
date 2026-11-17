@@ -6,6 +6,15 @@
 
 web
 
+## Stack
+
+Vite + Tailwind CSS, sempre nas últimas versões estáveis (decisão do dono em 16/11/2026, na instalação do Impeccable).
+
+- **Vite**: servidor de desenvolvimento e build de produção (`npm run dev` / `npm run build`, saída em `dist/`). Projeto multipágina: `index.html` e `obrigado.html` como entradas.
+- **Tailwind CSS** (linha 4.x): instalado pelo plugin oficial `@tailwindcss/vite`, com `@import "tailwindcss";` no CSS principal e as cores da marca como tokens em `@theme` (#121212, #FF7C01→#FF9901, #F7F7F7, #FFF, laranja de texto #a34d00).
+- JavaScript puro (sem framework de componentes); WhatsApp, formulário FormSubmit, carrosséis e comparador continuam como estão em `main.js`.
+- Migração feita em 16/11/2026 (Vite 8, Tailwind 4): visual mantido igual; o CSS original segue em `assets/css/style.css`, importado pelo `assets/css/main.css`, e é convertido para Tailwind aos poucos.
+
 ## Users
 
 Empresários e gestores de comércio no estado do Rio de Janeiro (lojas, mercados, drogarias, autopeças, motopeças, varejo em geral) que estão montando, reformando ou ampliando uma loja ou um estoque. Chegam pela página vindos de anúncios do Google Ads, quase sempre pelo celular, e querem saber rápido se a MBVfY faz o móvel de que precisam e como pedir um orçamento.
@@ -28,7 +37,7 @@ A MBVfY é a própria fábrica, não uma revenda: fabrica no próprio galpão, v
 
 - Produtos: balcões estilo industrial, balcões-vitrine, gôndolas, estantes e estantes industriais, estantes monta-carga, vitrines e expositores, checkouts, roupeiros e projetos sob medida.
 - **Sem catálogo de produtos** por decisão do dono (ainda não formatado): nada de fichas, filtros ou páginas de produto sem pedido.
-- Site estático sem build (`index.html`, `assets/css/style.css`, `assets/js/main.js`); prioridade para carregamento rápido, celular primeiro e SEO básico.
+- Stack: Vite + Tailwind CSS (ver Stack); prioridade para carregamento rápido, celular primeiro e SEO básico.
 - Em aberto: hospedagem e domínio de publicação.
 
 ## Brand Commitments

@@ -1,0 +1,30 @@
+/*
+ * Entrada de CSS do site (Vite + Tailwind CSS).
+ *
+ * O Tailwind entra sem o "preflight" (o reset de estilos do navegador) de propósito:
+ * o visual atual foi escrito sem ele, e o reset mudaria links, listas e botões.
+ * O CSS original (style.css) fica na camada "components", então as classes
+ * utilitárias do Tailwind (camada "utilities") podem ajustá-lo quando preciso.
+ * Seções novas podem ser escritas direto com as classes do Tailwind.
+ */
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "./style.css" layer(components);
+
+/* Cores e fonte da marca como tokens do Tailwind (bg-escuro, text-laranja-texto, font-sans…).
+   "static" deixa as variáveis (--color-laranja etc.) sempre disponíveis, mesmo sem classe usando. */
+@theme static {
+  --font-sans: "Inter Tight", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --color-escuro: #121212;
+  --color-claro: #f7f7f7;
+  --color-branco: #ffffff;
+  --color-laranja: #ff8a01;
+  --color-laranja-escuro: #e07800;
+  --color-laranja-inicio: #ff7c01;
+  --color-laranja-fim: #ff9901;
+  --color-laranja-texto: #a34d00;
+  --color-texto-escuro: #121212;
+}

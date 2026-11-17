@@ -2,3 +2,5 @@
 .impeccable/config.local.json
 .impeccable/hook.cache.json
 .impeccable/*.ndjson
+node_modules/
+dist/
