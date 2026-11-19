@@ -27,6 +27,8 @@ Landing page da MBVfY Aço Mob, fábrica de móveis de aço para instalações c
 
 A MBVfY é a própria fábrica, não uma revenda: fabrica no próprio galpão, vai até a loja medir e projetar o espaço, entrega e monta. O cliente fala direto com quem fabrica (Kay e Rodrigo aparecem pelo nome nas avaliações).
 
+Briefing de copy do dono (18/11/2026): a MBVfY quer ser vista como empresa que oferece **soluções inteligentes para a estrutura e o funcionamento do comércio**, e não só como fabricante de móveis; o móvel de aço é o meio. Três conceitos: **organização** (espaço, mercadorias, rotina da equipe), **transformação** (exposição e apresentação profissional) e **investimento inteligente** (resistente, funcional, estética industrial, preço justo). Frase-conceito: "Industrial bonito, funcional e com preço justo!". Soluções acessíveis, nunca posicionada como projeto exclusivo e caro. Público principal: quem já tem loja funcionando (motopeças, autopeças, bicicletarias, ferramentas, material de construção). Sem promessa de aumento garantido de vendas e sem superlativos exagerados.
+
 ## Operating Context
 
 - Atendimento em todo o estado do RJ; sede em Duque de Caxias (Rua Numa Pompílio, 33 – Jardim Olavo Bilac).
@@ -46,13 +48,14 @@ A MBVfY é a própria fábrica, não uma revenda: fabrica no próprio galpão, v
 - Todo o conteúdo em português do Brasil, linguagem direta para o comerciante.
 - Logo SVG inline (mbv / FY / AÇO / mob com cruz), com animação de entrada já definida.
 - Títulos sem ponto final (pedido do dono).
-- Frase do dono "Fabricamos o mobiliário para o seu negócio" abre o texto da primeira dobra.
+- A primeira dobra segue o briefing de copy de 18/11/2026; a frase antiga "Fabricamos o mobiliário para o seu negócio" saiu por decisão do dono (18/11/2026).
 - Seções alternando o fundo (escuro, claro, laranja, branco), padrão herdado da página original.
 
 ## Evidence on Hand
 
 - 10 avaliações reais do Perfil da Empresa no Google, texto original sem edição, fotos em `assets/img/avaliacoes/`. Nunca inventar ou reescrever depoimentos.
-- Fotos de antes e depois de um estoque (depósito) atendido; fotos de antes e depois de uma loja ainda vão ser enviadas pelo dono.
+- Fotos de antes e depois de um estoque (depósito) atendido.
+- Fotos de antes e depois "De depósito a loja: material de construção" (enviadas pelo dono em 18/11/2026): um depósito com material no chão e uma área de vendas com gôndolas, estantes e balcão de aço. Não afirmar que é o mesmo espaço nem um cliente real.
 - As 6 fotos da galeria "Inspiração" (`assets/img/`) **não são trabalhos da MBVfY**: são referências. Nunca apresentá-las como clientes ou obras próprias.
 - Não existem números de clientes atendidos, anos de mercado, certificações ou estudos de caso: não fabricar.
 

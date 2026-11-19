@@ -29,7 +29,7 @@ Usados nos depoimentos e na galeria Inspiração. O `main.js` duplica os itens p
 
 ## Antes e depois (`.compare`)
 
-Comparador deslizante: a foto "depois" fica ao fundo e a "antes" é recortada até a barra. O controle é um `<input type="range">` invisível sobre a foto (mouse, toque e teclado), ligado em `main.js`. As duas fotos são quadradas (1024×1024). Hoje mostra um estoque (depósito).
+Comparador deslizante: a foto "depois" fica ao fundo e a "antes" é recortada até a barra. O controle é um `<input type="range">` invisível sobre a foto (mouse, toque e teclado), ligado em `main.js`. As fotos são quadradas (1024×1024). Hoje são dois comparadores na mesma seção, cada um com um título `h3`: um estoque (depósito) e "De depósito a loja: material de construção" (`material-construcao-antes.webp` e `material-construcao-depois.webp`, enviadas pelo dono em 18/11/2026). Para adicionar outro, copiar o bloco `.compare` + `.compare__legendas`; o `main.js` já liga todos.
 
 ## O que fabricamos (`#produtos`)
 
