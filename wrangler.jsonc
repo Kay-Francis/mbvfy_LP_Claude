@@ -4,6 +4,14 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "mbvfy-lp",
   "compatibility_date": "2026-11-16",
+  // Domínio (zona na conta do dono). Rotas, e não custom_domain, para não brigar com os
+  // registros A já existentes no DNS: o Worker responde antes de a requisição chegar à origem.
+  // Sem endereço *.workers.dev: o site fica só no domínio
+  "workers_dev": false,
+  "routes": [
+    { "pattern": "mbvfyacomob.com.br/*", "zone_name": "mbvfyacomob.com.br" },
+    { "pattern": "www.mbvfyacomob.com.br/*", "zone_name": "mbvfyacomob.com.br" }
+  ],
   "assets": {
     // Saída do `npm run build`
     "directory": "./dist",

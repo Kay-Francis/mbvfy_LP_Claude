@@ -38,7 +38,7 @@ npm run deploy     # build + publica no Cloudflare Workers (só com pedido do do
 
 ## Publicação (Cloudflare Workers)
 
-Site só de arquivos estáticos, sem código de Worker. A configuração está em [wrangler.jsonc](wrangler.jsonc): `assets.directory` aponta para `./dist`, as URLs ficam sem `.html` (`/obrigado.html` → `/obrigado`) e endereço inexistente responde 404. Publica-se com `npm run deploy` (exige `npx wrangler login` feito pelo dono) ou pelo Workers Builds ligado ao GitHub (build `npm run build`, deploy `npx wrangler deploy`). Primeiro deploy e domínio ainda pendentes (ver [docs/pendencias.md](docs/pendencias.md)). Nunca publicar ou alterar a conta da Cloudflare sem pedido explícito do dono.
+Site só de arquivos estáticos, sem código de Worker. A configuração está em [wrangler.jsonc](wrangler.jsonc): `assets.directory` aponta para `./dist`, as URLs ficam sem `.html` (`/obrigado.html` → `/obrigado`) e endereço inexistente responde 404. No ar desde 20/11/2026 em https://mbvfyacomob.com.br (e `www`), por rotas no `wrangler.jsonc`; sem endereço `workers.dev`. Publica-se com `npm run deploy` (no Windows, `npm.cmd`/`npx.cmd`; login já feito pelo dono) ou pelo Workers Builds ligado ao GitHub (build `npm run build`, deploy `npx wrangler deploy`). Arquivos de nome fixo (como `og-image.jpg`) ficam em `public/`. E-mail `contato@` pelo Email Routing da Cloudflare, encaminhando para o Gmail. Nunca publicar ou alterar a conta da Cloudflare sem pedido explícito do dono.
 
 ## Como trabalhar
 

@@ -5,11 +5,43 @@ function waLink(texto) {
   return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(texto);
 }
 
+// Google Ads: tag do Google "Tag do Google MBVFY AÇO MOB" (IDs AW-11342020876 e GT-WBK8WZ72;
+// destinos Google Ads e Google Analytics) e rótulos das conversões já existentes na conta,
+// copiados das tags do contêiner GTM-N8324XFP usado pelo site antigo.
+// Com o ID vazio, nenhuma tag é carregada.
+const GOOGLE_ADS = {
+  id: "AW-11342020876",
+  rotuloFormulario: "Kcx9CJCn5bwcEIyCpqAq", // "Solicitou Orçamento Formulário": conta na página de obrigado
+  rotuloWhatsApp: "HE-iCL_EsO4cEIyCpqAq",   // "[Contato] - Click Whatapp": conta no clique dos botões de WhatsApp
+};
+
+function conversao(rotulo) {
+  if (!GOOGLE_ADS.id || !rotulo || typeof window.gtag !== "function") return;
+  window.gtag("event", "conversion", { send_to: GOOGLE_ADS.id + "/" + rotulo, transport_type: "beacon" });
+}
+
+if (GOOGLE_ADS.id) {
+  const s = document.createElement("script");
+  s.async = true;
+  s.src = "https://www.googletagmanager.com/gtag/js?id=" + GOOGLE_ADS.id;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", GOOGLE_ADS.id);
+  // Página de obrigado: só se chega nela depois de enviar o formulário
+  if (document.body.dataset.conversao === "formulario") conversao(GOOGLE_ADS.rotuloFormulario);
+}
+
 // Todos os links com data-wa abrem o WhatsApp com a mensagem já escrita
 document.querySelectorAll("[data-wa]").forEach(function (a) {
   a.href = waLink(a.dataset.wa);
   a.target = "_blank";
   a.rel = "noopener";
+  // Na página de obrigado o lead já foi contado pelo formulário: não conta de novo
+  if (document.body.dataset.conversao !== "formulario") {
+    a.addEventListener("click", function () { conversao(GOOGLE_ADS.rotuloWhatsApp); });
+  }
 });
 
 // Formulário: envia os dados por e-mail usando o FormSubmit (formsubmit.co).
