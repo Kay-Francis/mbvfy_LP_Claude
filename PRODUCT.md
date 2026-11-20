@@ -12,7 +12,7 @@ Vite + Tailwind CSS, sempre nas últimas versões estáveis (decisão do dono em
 
 - **Vite**: servidor de desenvolvimento e build de produção (`npm run dev` / `npm run build`, saída em `dist/`). Projeto multipágina: `index.html` e `obrigado.html` como entradas.
 - **Tailwind CSS** (linha 4.x): instalado pelo plugin oficial `@tailwindcss/vite`, com `@import "tailwindcss";` no CSS principal e as cores da marca como tokens em `@theme` (#121212, #FF7C01→#FF9901, #F7F7F7, #FFF, laranja de texto #a34d00).
-- JavaScript puro (sem framework de componentes); WhatsApp, formulário FormSubmit, carrosséis e comparador continuam como estão em `main.js`.
+- JavaScript puro (sem framework de componentes); WhatsApp, formulário Web3Forms, carrosséis e comparador continuam como estão em `main.js`.
 - Migração feita em 16/11/2026 (Vite 8, Tailwind 4): visual mantido igual; o CSS original segue em `assets/css/style.css`, importado pelo `assets/css/main.css`, e é convertido para Tailwind aos poucos.
 
 ## Users
@@ -35,7 +35,7 @@ Nova direção do dono (20/11/2026): a página passa a falar de **identidade do 
 
 - Atendimento em todo o estado do RJ; sede em Duque de Caxias (Rua Numa Pompílio, 33 – Jardim Olavo Bilac).
 - Fluxo comercial: o cliente conta o que precisa (WhatsApp) → a equipe indica os modelos → envia a proposta → fabrica, entrega e monta no prazo combinado.
-- WhatsApp (21) 99652-9608 é o canal principal; o formulário envia por e-mail via FormSubmit.
+- WhatsApp (21) 99652-9608 é o canal principal; o formulário envia por e-mail via Web3Forms.
 
 ## Capabilities and Constraints
 

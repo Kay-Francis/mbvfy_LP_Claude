@@ -5,4 +5,4 @@ O dono escolheu publicar no Cloudflare Workers (16/11/2026), no lugar do GitHub 
 ## Consequências
 
 - Por padrão, o Workers tira o `.html` das URLs: `/obrigado.html` redireciona para `/obrigado`. A conversão do Google Ads deve usar "URL contém `/obrigado`".
-- Um Worker com código (por exemplo, para receber o formulário sem o FormSubmit) pode ser acrescentado depois no mesmo projeto.
+- Um Worker com código (por exemplo, para receber o formulário sem serviço externo) pode ser acrescentado depois no mesmo projeto.

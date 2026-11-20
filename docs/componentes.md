@@ -4,10 +4,10 @@ Como funciona cada parte com comportamento próprio. Regras de conteúdo e visua
 
 ## Formulário de orçamento
 
-- Envia por e-mail para **mbvfyacomob@gmail.com** via FormSubmit (`FORM_ENDPOINT` em `assets/js/main.js`).
-- Campos: nome, WhatsApp, e-mail, tipo de comércio, o que precisa, mais o campo-armadilha `_honey` contra spam.
-- Após o envio dispara o evento `generate_lead` (se a tag do Google `gtag` estiver instalada) e redireciona para `obrigado.html`, página de agradecimento (noindex) usada como conversão no Google Ads.
-- No Cloudflare Workers, `/obrigado.html` redireciona para `/obrigado` (comportamento padrão de `html_handling`). A conversão do Google Ads deve usar a regra "URL contém `/obrigado`".
+- Envia por e-mail para **mbvfyacomob@gmail.com** via Web3Forms (`FORM_ENDPOINT` e `WEB3FORMS_KEY` em `assets/js/main.js`). A chave foi criada com esse e-mail em web3forms.com; para trocar o destino, gerar outra chave lá. Trocado do FormSubmit em 20/11/2026 (ele exigia ativação por endereço de site e não ativou o domínio).
+- Campos: nome, WhatsApp, e-mail, tipo de comércio, o que precisa, mais o campo-armadilha `_honey` contra spam. Com e-mail preenchido, "Responder" no Gmail vai para o cliente.
+- Só redireciona para `obrigado.html` quando o Web3Forms confirma o envio (`success: true`); senão mostra o erro com o WhatsApp.
+- Conversão do Google Ads: a página de obrigado tem `data-conversao="formulario"` no `<body>`, e o `main.js` dispara a conversão "Solicitou Orçamento Formulário" ao abri-la (códigos em `GOOGLE_ADS`). No Cloudflare Workers, `/obrigado.html` redireciona para `/obrigado`.
 
 ## WhatsApp
 

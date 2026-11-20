@@ -44,10 +44,12 @@ document.querySelectorAll("[data-wa]").forEach(function (a) {
   }
 });
 
-// Formulário: envia os dados por e-mail usando o FormSubmit (formsubmit.co).
-// No primeiro envio o FormSubmit manda um e-mail de ativação para este endereço;
-// depois de ativar, dá para trocar o e-mail abaixo pelo código que ele fornece.
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/mbvfyacomob@gmail.com";
+// Formulário: envia os dados por e-mail usando o Web3Forms (web3forms.com), que entrega
+// em mbvfyacomob@gmail.com. A chave é pública por natureza (fica no site) e só permite
+// enviar para esse e-mail. Trocou do FormSubmit em 20/11/2026: ele exigia ativação por
+// endereço de site e não ativava o domínio novo.
+const FORM_ENDPOINT = "https://api.web3forms.com/submit";
+const WEB3FORMS_KEY = "cc45cae1-594b-4119-b712-3aae62210207";
 
 const form = document.getElementById("form-orcamento");
 if (form) {
@@ -80,16 +82,17 @@ if (form) {
     if (valor("_honey")) { window.location.href = "obrigado.html"; return; }
 
     const payload = {
+      access_key: WEB3FORMS_KEY,
+      subject: "Novo pedido de orçamento pelo site: " + valor("nome"),
+      from_name: "Site MBVfY Aço Mob",
       Nome: valor("nome"),
       WhatsApp: valor("whatsapp"),
       "E-mail": valor("email") || "(não informado)",
       "Tipo de comércio": valor("comercio") || "(não informado)",
       "O que precisa": valor("mensagem"),
-      _subject: "Novo pedido de orçamento pelo site: " + valor("nome"),
-      _template: "table",
-      _captcha: "false",
     };
-    if (valor("email")) payload._replyto = valor("email");
+    // "Responder" no Gmail vai direto para o cliente
+    if (valor("email")) payload.replyto = valor("email");
 
     botao.disabled = true;
     botao.textContent = "Enviando...";
@@ -100,7 +103,7 @@ if (form) {
         body: JSON.stringify(payload),
       });
       const json = await resp.json().catch(function () { return {}; });
-      if (!resp.ok || String(json.success) !== "true") throw new Error(json.message || "Falha no envio");
+      if (!resp.ok || json.success !== true) throw new Error(json.message || "Falha no envio");
 
       // Ponto para medir conversão do Google Ads (ativo quando a tag do Google estiver na página)
       if (typeof window.gtag === "function") window.gtag("event", "generate_lead", { form: "orcamento" });
