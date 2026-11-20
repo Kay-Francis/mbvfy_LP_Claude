@@ -4,7 +4,7 @@ Atualizado em 20/11/2026. Quando uma pendência virar trabalho, abrir uma issue 
 
 ## Com o dono
 
-- [x] **Formulário** (20/11/2026): trocado do FormSubmit para o Web3Forms; envio de teste pelo site chegou à página de obrigado e disparou a conversão. Conferir se o e-mail "TESTE do site" chegou na caixa de entrada (se cair no Spam, marcar "Não é spam").
+- [x] **Formulário** (20/11/2026): trocado do FormSubmit para o Web3Forms; envio de teste pelo site chegou à página de obrigado e disparou a conversão; o e-mail de teste chegou no Gmail (confirmado pelo dono).
 - [ ] **Revisar a copy.** Pontos já levantados: o passo 01 de "Como funciona" fala só em WhatsApp; o e-mail exibido (contato@mbvfyacomob.com.br) é diferente do que recebe o formulário (mbvfyacomob@gmail.com).
 - [x] **Antes e depois de loja** (18/11/2026): segundo comparador "Material de construção: do depósito à área de vendas".
 - [x] **Conta da Cloudflare** (20/11/2026): `wrangler login` feito pelo dono na conta mbvfyacomob@gmail.com. No Windows, usar `npx.cmd` (a política de scripts bloqueia o `npx.ps1`).
