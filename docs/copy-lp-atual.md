@@ -1,16 +1,17 @@
 # Copy da landing page nova (MBVfY Aço Mob)
 
-Textos da página como estão hoje (18/11/2026, depois do briefing de copy do dono), na ordem em que aparecem.
+Textos da página como estão hoje (20/11/2026, nova direção: identidade do negócio e design industrial), na ordem em que aparecem.
 
 ## Regras para a copy
 
 - Escrever em português do Brasil.
 - A marca se escreve sempre **MBVfY Aço Mob**.
+- Títulos sem ponto final (pedido do dono); "!" e "?" podem.
 - Os depoimentos são avaliações reais do Google: usar o texto exatamente como está, sem corrigir nem resumir.
 - Não inventar clientes, números, prazos, garantias ou certificações. Sem promessa de aumento garantido de vendas.
 - As fotos da galeria Inspiração não são trabalhos da MBVfY: não apresentá-las como projetos entregues.
 - As fotos de antes e depois não são de um cliente real: não dizer que é "o mesmo espaço" nem citar cliente.
-- Objetivo da página: gerar pedido de orçamento pelo WhatsApp ou pelo formulário. Público: donos e gestores de comércio no RJ que já têm loja funcionando, chegando por anúncio do Google, quase sempre pelo celular.
+- Objetivo da página: gerar pedido de orçamento pelo WhatsApp ou pelo formulário. Público: donos e gestores de pequenos e médios negócios no RJ, de diferentes segmentos, chegando por anúncio do Google, quase sempre pelo celular.
 
 ---
 
@@ -20,76 +21,76 @@ Produtos · Inspiração · Como funciona · Quem somos · Contato · Botão: (2
 
 ## Primeira dobra
 
-# Sua loja pode vender mais sem precisar de mais espaço
+# Seu negócio tem identidade? O espaço pode expressar isso
 
-**Aproveite melhor cada metro quadrado, organize suas mercadorias e dê mais destaque aos seus produtos.** A MBVfY Aço Mob fabrica balcões, vitrines, gôndolas e estantes que ajudam a melhorar a organização, ampliar a exposição das mercadorias e tornar o atendimento mais prático e eficiente.
+Sub headline (branca, parágrafo próprio): **Móveis de aço com design industrial para quem busca uma apresentação mais atual, funcional e profissional.**
 
-- Melhor aproveitamento do espaço disponível
-- Mais produtos organizados e bem expostos
-- Ambiente mais bonito e profissional
-- Móveis resistentes, com visual industrial e preço justo
+Balcões, vitrines, gôndolas e estantes que combinam estética, resistência e inteligência no aproveitamento do espaço, com investimento acessível.
 
-Botão (WhatsApp): **Quero melhorar minha loja**
+- Design industrial que acompanha as tendências do varejo
+- Estruturas que valorizam produtos e ambientes
+- Soluções para diferentes segmentos comerciais
+- Fabricação própria com preço justo
+
+Botão (WhatsApp): **Quero valorizar meu negócio**
 
 ## Problema
 
-Etiqueta: SUA LOJA PODE ESTAR APROVEITANDO MELHOR O ESPAÇO
+Etiqueta: SEU ESPAÇO TAMBÉM COMUNICA A IDENTIDADE DO SEU NEGÓCIO
 
-## Mercadorias acumuladas, produtos escondidos e dificuldade para organizar?
+## A apresentação do seu negócio também faz parte da sua identidade
 
-Sua estrutura pode estar atrapalhando o seu comércio. Quando balcões, prateleiras e estantes não atendem às necessidades da loja, o espaço fica menos funcional e o trabalho da equipe se torna mais difícil.
+O espaço comercial transmite uma mensagem antes mesmo do primeiro atendimento. Móveis ultrapassados, exposição improvisada e estruturas pouco funcionais podem não representar a qualidade e o cuidado que você deseja transmitir aos seus clientes.
 
-- **Espaço mal aproveitado:** áreas que poderiam receber mais mercadorias ou melhorar a circulação ficam inutilizadas.
-- **Produtos pouco visíveis:** mercadorias ficam escondidas ou mal distribuídas, dificultando que o cliente encontre o que procura.
-- **Estoque desorganizado:** a equipe perde tempo procurando produtos e separando pedidos.
-- **Apresentação comprometida:** móveis inadequados deixam a loja com aparência desorganizada e pouco profissional.
+- **Identidade visual:** o ambiente precisa conversar com a proposta do seu negócio.
+- **Apresentação:** a maneira como os produtos são expostos influencia a percepção de valor.
+- **Funcionalidade:** uma estrutura bem planejada facilita a rotina e o atendimento.
+- **Evolução:** atualizar o ambiente é também acompanhar as mudanças do mercado.
 
 ## Benefícios
 
-Etiqueta: MAIS ORGANIZAÇÃO E APROVEITAMENTO DO ESPAÇO
+Etiqueta: ESTÉTICA, FUNCIONALIDADE E INTELIGÊNCIA COMERCIAL
 
-## Uma estrutura bem planejada faz diferença no dia a dia da sua loja!
+## Design industrial: estética atual com inteligência comercial
 
-Balcões, vitrines, gôndolas e estantes adequados ajudam a organizar as mercadorias, melhorar a exposição dos produtos e tornar o ambiente mais funcional.
+A escolha dos móveis certos transforma a maneira como o espaço é utilizado e como os produtos são apresentados. O estilo industrial combina personalidade visual, resistência e versatilidade para diferentes segmentos comerciais.
 
-- **Aproveitamento do espaço:** organize melhor cada área da loja e utilize melhor os espaços disponíveis.
-- **Exposição dos produtos:** facilite a visualização das mercadorias e destaque os produtos que deseja vender.
-- **Organização do estoque:** mantenha os produtos melhor distribuídos e facilite a localização das mercadorias.
-- **Atendimento mais ágil:** proporcione mais praticidade para sua equipe atender clientes e separar pedidos.
-- **Apresentação profissional:** valorize seu comércio com um ambiente bonito, organizado e funcional.
+- **Identidade:** um visual contemporâneo que ajuda a diferenciar seu estabelecimento.
+- **Valorização:** exposição que dá mais destaque aos produtos.
+- **Versatilidade:** combinações de móveis para diferentes necessidades e ambientes.
+- **Organização:** estruturas que facilitam o trabalho e o aproveitamento do espaço.
+- **Investimento inteligente:** estética e funcionalidade sem precisar partir para projetos de alto custo.
 
 ## Produtos
 
-## Soluções em móveis de aço para organizar, expor e valorizar seu comércio
+## Móveis de aço para construir ambientes com personalidade
 
-Cada tipo de comércio tem necessidades diferentes. Por isso, oferecemos diversas soluções para ajudar você a estruturar melhor sua loja.
+Cada segmento tem sua própria identidade e necessidades. Oferecemos diferentes modelos de móveis industriais para compor ambientes comerciais funcionais, modernos e bem apresentados.
 
-- **Balcões comerciais:** para atendimento, caixa, exposição e organização.
-- **Balcões-vitrine:** destaque seus produtos e facilite a visualização pelo cliente.
-- **Gôndolas de aço:** organize e distribua suas mercadorias, aproveitando melhor a área de vendas.
-- **Estantes comerciais:** soluções para exposição e organização de produtos.
+- **Balcões comerciais:** atendimento, caixa e exposição integrados à identidade do ambiente.
+- **Balcões-vitrine:** destaque para produtos que merecem maior visibilidade.
+- **Gôndolas de aço:** exposição organizada e versátil para diferentes categorias de produtos.
+- **Estantes comerciais:** soluções para exposição e organização com estética industrial.
 - **Estantes monta-carga:** aproveitamento vertical e organização de estoques.
-- **Checkouts:** estrutura funcional para o atendimento e fechamento das compras.
+- **Checkouts:** funcionalidade e praticidade para o fechamento das compras.
 - **Roupeiros:** organização de pertences em ambientes profissionais.
 - **Soluções sob medida:** móveis desenvolvidos de acordo com as necessidades e dimensões do seu espaço.
 
-Botão (WhatsApp): **Quero encontrar a solução para minha loja**
+Botão (WhatsApp): **Conheça nossas soluções**
 
 ## Chamada (faixa laranja)
 
 ## Industrial bonito, funcional e com preço justo!
 
-Valorize seu comércio com móveis de aço que unem estética, resistência e praticidade. Um investimento inteligente para quem quer organizar e apresentar melhor seu negócio.
+Uma estética contemporânea, estruturas resistentes e soluções versáteis para valorizar seu negócio sem comprometer o planejamento do investimento.
 
 ## Inspiração
 
-## Veja como móveis de aço podem valorizar diferentes tipos de comércio!
+## Inspire-se em ambientes que valorizam o estilo do seu negócio
 
-Uma boa combinação de balcões, vitrines, gôndolas e estantes pode mudar a maneira como seus produtos são apresentados e como o espaço é utilizado.
+O mobiliário faz parte da identidade visual de um estabelecimento. A combinação de balcões, vitrines, gôndolas e estantes em aço permite criar ambientes com personalidade, organização e uma estética industrial contemporânea.
 
-O visual industrial oferece uma estética moderna e versátil, que combina com diferentes segmentos comerciais.
-
-Confira algumas possibilidades de aplicação:
+Confira algumas possibilidades de composição para diferentes segmentos comerciais:
 
 - Balcões-vitrine e estantes · Motopeças
 - Balcão-vitrine e prateleiras · Bike Shop
@@ -98,13 +99,13 @@ Confira algumas possibilidades de aplicação:
 - Balcão, gôndolas e painéis · Motopeças
 - Balcões de atendimento com vitrine · Motopeças
 
-Botão (WhatsApp): **Quero melhorar a apresentação da minha loja**
+Botão (WhatsApp): **Quero valorizar a apresentação do meu negócio**
 
 ## Antes e depois
 
-## Veja o que muda quando o espaço é bem aproveitado!
+## Estética e funcionalidade precisam caminhar juntas
 
-Uma estrutura adequada pode ajudar a transformar áreas desorganizadas em ambientes mais funcionais, facilitando a rotina de trabalho e a localização dos produtos. As imagens são exemplos de possibilidades de organização.
+Um ambiente comercial bem estruturado aproveita melhor o espaço, facilita a rotina de trabalho e apresenta os produtos de maneira mais profissional. Veja algumas possibilidades de transformação:
 
 **Estoque: mais organização e espaço disponível** (comparador de fotos)
 - **Antes:** caixas no chão, corredores bloqueados e mercadorias difíceis de localizar.
@@ -116,7 +117,7 @@ Uma estrutura adequada pode ajudar a transformar áreas desorganizadas em ambien
 
 ## Depoimentos (avaliações reais do Google: não alterar)
 
-## Quem é atendido por nós percebe a diferença!
+## Qualidade, atendimento e confiança reconhecidos por nossos clientes
 
 A qualidade dos produtos, o atendimento e o compromisso com a entrega fazem parte da experiência que buscamos oferecer aos nossos clientes.
 
@@ -147,41 +148,41 @@ A qualidade dos produtos, o atendimento e o compromisso com a entrega fazem part
 > Compra via telefone, comprei sem ter ido na loja. Fui muito bem atendido, entrega no prazo. Super indico!!
 > Moro em Angra dos Reis.
 
-Botões: **Agora é a vez da sua loja** · **Ver todas as avaliações no Google**
+Botões: **Agora é a vez do seu negócio** · **Ver todas as avaliações no Google**
 
 ## Como funciona
 
-## Do orçamento à entrega, tudo mais simples para você!
+## Uma boa escolha começa com um bom planejamento
 
-Você não precisa conhecer todos os modelos de móveis ou saber exatamente como organizar seu espaço. Nossa equipe ajuda a encontrar as soluções mais adequadas às suas necessidades.
+Nossa equipe ajuda você a encontrar móveis que combinem com as necessidades do negócio, o espaço disponível e o investimento que deseja realizar.
 
-1. **Conte o que você precisa:** fale com nossa equipe pelo WhatsApp. Conte qual é o seu tipo de comércio, o que precisa organizar e quais produtos deseja expor.
-2. **Encontramos as melhores opções:** orientamos você sobre os modelos de balcões, vitrines, gôndolas e estantes mais adequados ao seu espaço e à sua necessidade.
-3. **Você recebe sua proposta:** definimos os produtos, as quantidades e as condições comerciais. Você recebe seu orçamento para avaliar o investimento.
+1. **Conte o que você precisa:** fale com nossa equipe pelo WhatsApp. Apresente seu segmento, o espaço disponível e o que deseja organizar ou expor.
+2. **Encontramos as melhores opções:** orientamos você sobre os modelos de balcões, vitrines, gôndolas e estantes mais adequados.
+3. **Você recebe sua proposta:** definimos produtos, quantidades e condições comerciais. Você recebe seu orçamento para avaliar o investimento.
 4. **Fabricamos e entregamos:** com a proposta aprovada, seguimos com a fabricação e a entrega conforme as condições e o prazo combinados.
 
 Botão (WhatsApp): **Converse com quem fabrica**
 
 ## Quem somos
 
-## MBVfY Aço Mob: soluções em aço para o seu comércio!
+## MBVfY Aço Mob: design industrial com inteligência de investimento
 
-Somos fabricantes de móveis de aço e trabalhamos para oferecer soluções que atendam às necessidades reais de lojas e estabelecimentos comerciais.
+Somos fabricantes de móveis de aço e acreditamos que um ambiente comercial atual, funcional e bem apresentado não precisa representar um investimento fora da realidade de pequenos e médios negócios.
 
-Unimos funcionalidade, resistência e estética industrial para produzir móveis que ajudam empresários a organizar seus espaços, valorizar seus produtos e melhorar a estrutura de seus negócios.
+Unimos fabricação própria, estética industrial e soluções versáteis para oferecer móveis que ajudam empresas a expressar sua identidade e evoluir sua estrutura comercial.
 
 **MBVfY Aço Mob. Fabricação própria, atendimento direto com quem fabrica.**
 
 - **Resistência:** estruturas de aço pensadas para o uso comercial.
 - **Funcionalidade:** soluções que facilitam a organização e o aproveitamento do espaço.
-- **Design industrial:** visual moderno que valoriza a apresentação do comércio.
-- **Investimento inteligente:** soluções funcionais e com preço justo.
+- **Design industrial:** estética contemporânea para diferentes segmentos comerciais.
+- **Investimento inteligente:** soluções funcionais, versáteis e com preço justo.
 
 ## Contato
 
-## Sua loja pode aproveitar melhor o espaço que tem. Vamos encontrar a solução ideal?
+## Seu negócio merece um espaço à altura da sua proposta
 
-Conte para nós o que você precisa melhorar no seu comércio. Nossa equipe está pronta para ajudar você a encontrar as melhores soluções em móveis de aço.
+Conte para nós o que deseja melhorar, atualizar ou transformar. Vamos encontrar as soluções em móveis de aço que combinem com sua identidade, suas necessidades e seu orçamento.
 
 **Fale diretamente com quem fabrica!**
 

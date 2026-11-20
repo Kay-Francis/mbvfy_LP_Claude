@@ -29,6 +29,8 @@ A MBVfY é a própria fábrica, não uma revenda: fabrica no próprio galpão, v
 
 Briefing de copy do dono (18/11/2026): a MBVfY quer ser vista como empresa que oferece **soluções inteligentes para a estrutura e o funcionamento do comércio**, e não só como fabricante de móveis; o móvel de aço é o meio. Três conceitos: **organização** (espaço, mercadorias, rotina da equipe), **transformação** (exposição e apresentação profissional) e **investimento inteligente** (resistente, funcional, estética industrial, preço justo). Frase-conceito: "Industrial bonito, funcional e com preço justo!". Soluções acessíveis, nunca posicionada como projeto exclusivo e caro. Público principal: quem já tem loja funcionando (motopeças, autopeças, bicicletarias, ferramentas, material de construção). Sem promessa de aumento garantido de vendas e sem superlativos exagerados.
 
+Nova direção do dono (20/11/2026): a página passa a falar de **identidade do negócio e design industrial** ("Seu negócio tem identidade? O espaço pode expressar isso"). O espaço comunica a proposta do negócio; os móveis de aço unem estética contemporânea, funcionalidade e investimento acessível (preço justo, sem projeto de alto custo), para pequenos e médios negócios de diferentes segmentos. Organização e aproveitamento do espaço continuam como argumentos, mas em segundo plano.
+
 ## Operating Context
 
 - Atendimento em todo o estado do RJ; sede em Duque de Caxias (Rua Numa Pompílio, 33 – Jardim Olavo Bilac).
