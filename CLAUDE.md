@@ -30,7 +30,7 @@ npm run preview:cf # build + roda o dist/ no Workers local (http://localhost:878
 npm run deploy     # build + publica no Cloudflare Workers (só com pedido do dono)
 ```
 
-- Páginas: `index.html` e `obrigado.html` na raiz (entradas em `vite.config.js`).
+- Páginas: `index.html`, `obrigado.html` e `politicas.html` (Termos de Uso e Política de Privacidade, texto do dono vindo do WordPress, com ajustes aprovados por ele: só mudar a pedido do dono) na raiz (entradas em `vite.config.js`).
 - CSS: `assets/css/main.css` (Tailwind + tokens da marca) importa o CSS original `assets/css/style.css`. Seções novas usam classes do Tailwind; o CSS antigo vai sendo convertido sem mudar o visual.
 - JS: `assets/js/main.js`, sem framework.
 - O que vai ao ar é sempre a pasta `dist/`, nunca a raiz. Não usar `?v=` nos links: o Vite já renomeia os arquivos a cada build.

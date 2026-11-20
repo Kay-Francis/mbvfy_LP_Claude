@@ -318,6 +318,15 @@ h1, h2, h3 { text-wrap: balance; }
 .pillars strong { color: var(--accent-text, var(--brand)); }
 .pillars strong { font-size: 1.3rem; text-transform: uppercase; letter-spacing: .04em; }
 .pillars span { color: var(--muted); }
+/* Selos de diferencial (Quem somos): cada informação com o seu próprio destaque */
+.selos { list-style: none; padding: 0; margin: 24px 0 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.selos li {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 10px 16px; border-radius: 999px;
+  background: #fff4e8; border: 1px solid #ffd2a3;
+  color: var(--text); font-weight: 700; line-height: 1.25;
+}
+.selos .ico { color: var(--accent-text, var(--brand)); flex: none; width: 1.25em; height: 1.25em; }
 
 /* Contato */
 .contact { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 14px; }
@@ -344,6 +353,21 @@ h1, h2, h3 { text-wrap: balance; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .form button[disabled] { opacity: .6; cursor: wait; }
 .form__note {color: var(--muted); font-size: .82rem; margin: 0; text-align: center; }
+
+/* Página de Termos de Uso e Política de Privacidade */
+.legal__box { max-width: 760px; }
+.legal h1 { font-size: clamp(2.2rem, 5vw, 2.8rem); margin-bottom: 16px; }
+.legal__indice { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 40px; }
+.legal__indice a { color: var(--accent-text, var(--brand)); font-weight: 600; }
+.legal section { padding-top: 32px; border-top: 1px solid var(--line); margin-bottom: 24px; scroll-margin-top: 96px; }
+.legal h2 { font-size: 1.75rem; margin: 0 0 20px; }
+.legal ol { padding-left: 1.4em; margin: 0; display: grid; gap: 20px; }
+.legal ol > li::marker { font-weight: 700; color: var(--accent-text, var(--brand)); }
+.legal h3 { font-size: 1.35rem; margin: 0 0 6px; }
+.legal p, .legal ul { color: var(--muted); margin: 0 0 8px; max-width: 70ch; }
+.legal ul { padding-left: 1.2em; }
+.legal a[href^="mailto"] { color: var(--accent-text, var(--brand)); font-weight: 600; }
+.legal__cta { margin-top: 32px; }
 
 /* Página de obrigado */
 .thanks { padding: 56px 0 72px; min-height: calc(100vh - 72px - 90px); }
@@ -376,6 +400,9 @@ h1, h2, h3 { text-wrap: balance; }
 .footer { border-top: 1px solid var(--line); padding: 28px 0 96px; color: var(--muted); font-size: .9rem; }
 .footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
 .footer p { margin: 0; }
+.footer a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.footer a:hover, .form__note a:hover { color: var(--brand); }
+.form__note a { color: inherit; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
 
 /* Botão flutuante */
 .wa-float {

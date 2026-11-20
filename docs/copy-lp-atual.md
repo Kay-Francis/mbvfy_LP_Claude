@@ -171,7 +171,7 @@ Somos fabricantes de móveis de aço e acreditamos que um ambiente comercial atu
 
 Unimos fabricação própria, estética industrial e soluções versáteis para oferecer móveis que ajudam empresas a expressar sua identidade e evoluir sua estrutura comercial.
 
-**MBVfY Aço Mob. Fabricação própria, atendimento direto com quem fabrica.**
+Selos (com ícone, lado a lado): **Fabricação própria** · **Atendimento direto com quem fabrica**
 
 - **Resistência:** estruturas de aço pensadas para o uso comercial.
 - **Funcionalidade:** soluções que facilitam a organização e o aproveitamento do espaço.
